@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Terms & Conditions | The Consorts Hotels</title>
+    <meta name="description" content="Read the terms and conditions for The Consorts Hotels & Resorts, including booking policies, payment rules, and guest responsibilities.">
+
+    <link rel="shortcut icon" href="/images/logo/consort_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #151520;
+            --bg-card-hover: #1a1a28;
+            --bg-glass: rgba(18, 18, 28, 0.85);
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #a8883e;
+            --gold-glow: rgba(201, 169, 98, 0.15);
+            --gold-glow-strong: rgba(201, 169, 98, 0.3);
+            --text-primary: #f0ede8;
+            --text-secondary: #b0ada8;
+            --text-muted: #7a7875;
+            --text-gold: #d4b87a;
+            --border-dark: #2a2a35;
+            --border-light: #3a3a48;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.15);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+            --font-accent: 'Montserrat', sans-serif;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --container: 1280px;
+        }
+
+        *,
+        *::before,
+        *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: 0.01em;
+        }
+
+        ::selection { background: var(--gold); color: var(--bg-primary); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color var(--transition-fast); }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; background: none; font-family: var(--font-body); font-size: inherit; color: inherit; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; } .mb-2 { margin-bottom: 1rem; } .mb-3 { margin-bottom: 1.5rem; } .mb-4 { margin-bottom: 2rem; } .mb-5 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mt-3 { margin-top: 1.5rem; } .mt-4 { margin-top: 2rem; } .mt-5 { margin-top: 3rem; }
+
+        .subtitle {
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--text-primary); }
+        h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; line-height: 1.15; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+        h3 { font-size: 1.3rem; font-weight: 600; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.8rem 1.8rem; font-family: var(--font-accent); font-size: 0.85rem; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase; border-radius: var(--radius-full);
+            transition: all var(--transition-base); position: relative; overflow: hidden; white-space: nowrap;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: #0a0a0f; box-shadow: 0 4px 20px var(--gold-glow-strong); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--gold-glow-strong); background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #0a0a0f; }
+        .btn-secondary { background: transparent; color: var(--text-gold); border: 1px solid var(--gold-dark); }
+        .btn-secondary:hover { background: var(--gold-glow); border-color: var(--gold); transform: translateY(-2px); color: var(--gold-light); }
+        .btn-lg { padding: 1rem 2.4rem; font-size: 0.9rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.8rem 0; transition: all var(--transition-base); background: transparent; }
+        .header.scrolled { background: var(--bg-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); padding: 0.5rem 0; box-shadow: var(--shadow-sm); }
+        .header-container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .logo img { height: 44px; width: auto; transition: height var(--transition-base); filter: brightness(1.1); }
+        .header.scrolled .logo img { height: 38px; }
+        .nav-desktop ul { display: flex; align-items: center; gap: 0.3rem; }
+        .nav-desktop ul li a { padding: 0.5rem 1rem; font-family: var(--font-accent); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-full); transition: all var(--transition-fast); }
+        .nav-desktop ul li a:hover, .nav-desktop ul li a.active { color: var(--text-gold); background: var(--gold-glow); }
+        .book-1 { padding: 0.65rem 1.5rem; font-size: 0.78rem; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; z-index: 1001; }
+        .hamburger span { display: block; width: 28px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all var(--transition-base); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .hamburger.active span:nth-child(4) { transform: rotate(45deg) translate(-2px, -12px); }
+
+        .nav-mobile { position: fixed; top: 0; right: -100%; width: min(360px, 85vw); height: 100vh; background: var(--bg-secondary); border-left: 1px solid var(--border-dark); padding: 5rem 2rem 2rem; transition: right var(--transition-slow); z-index: 999; overflow-y: auto; box-shadow: var(--shadow-lg); }
+        .nav-mobile.open { right: 0; }
+        .nav-mobile ul { display: flex; flex-direction: column; gap: 0.3rem; }
+        .nav-mobile ul li a { display: block; padding: 0.9rem 1rem; font-family: var(--font-accent); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+        .nav-mobile ul li a:hover { color: var(--text-gold); background: var(--gold-glow); }
+        .nav-mobile .btn { margin-top: 1rem; width: 100%; }
+        .overlay-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 998; opacity: 0; visibility: hidden; transition: all var(--transition-base); }
+        .overlay-backdrop.visible { opacity: 1; visibility: visible; }
+
+        /* Hero */
+        .hero { position: relative; height: 50vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-size: cover; background-position: center; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,15,0.7) 0%, rgba(10,10,15,0.4) 50%, rgba(10,10,15,0.8) 100%); }
+        .hero .container { position: relative; z-index: 2; }
+        .hero h1 { color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.5); margin-bottom: 0.5rem; }
+        .hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; font-weight: 300; }
+
+        /* Sections */
+        .section { padding: 5rem 0; position: relative; }
+        .bg-light { background: var(--bg-secondary); }
+        .bg-white { background: var(--bg-primary); } /* override */
+
+        /* Terms container */
+        .terms-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .terms-container h2 {
+            margin-bottom: 1.5rem;
+            color: var(--gold-light);
+        }
+        .terms-container ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .terms-container ul li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+        }
+        .terms-container ul li::before {
+            content: '•';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Newsletter */
+        .newsletter { padding: 4rem 0; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+        .newsletter h2 { margin-bottom: 0.5rem; }
+        .newsletter p { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; }
+        .newsletter-form { display: flex; gap: 0.6rem; max-width: 500px; margin: 0 auto; }
+        .newsletter-form input { flex: 1; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-full); padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+        .newsletter-form input:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px var(--gold-glow); }
+        .newsletter-form button { padding: 0.85rem 2rem; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--bg-primary); border-radius: var(--radius-full); font-family: var(--font-accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: all var(--transition-base); white-space: nowrap; }
+        .newsletter-form button:hover { background: linear-gradient(135deg, var(--gold-light), var(--gold)); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+
+        /* Footer */
+        .footer { background: var(--bg-secondary); padding: 4rem 0 0; border-top: 1px solid var(--border-dark); }
+        .footer .row { display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 2.5rem; padding-bottom: 3rem; }
+        .footer h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-gold); margin-bottom: 1.2rem; }
+        .footer p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; }
+        .footer-social { display: flex; gap: 0.7rem; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.95rem; transition: all var(--transition-fast); }
+        .footer-social a:hover { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); transform: translateY(-3px); }
+        .footer-links li { margin-bottom: 0.7rem; font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 0.6rem; }
+        .footer-links li i { color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem; width: 16px; text-align: center; flex-shrink: 0; }
+        .footer-links a { color: var(--text-secondary); transition: color var(--transition-fast); }
+        .footer-links a:hover { color: var(--text-gold); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--border-dark); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 992px) {
+            .nav-desktop { display: none; }
+            .hamburger { display: flex; }
+            .book-1 { display: none; }
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 3.5rem 0; }
+            .footer .row { grid-template-columns: 1fr; gap: 2rem; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form button { width: 100%; }
+            .hero { min-height: 300px; }
+            .terms-container { padding: 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .header-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <!-- partials/header.html -->
+<header class="header" id="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="filter: brightness(1.1);">
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                <li><a href="../../pages/about/index.html">About Us</a></li>
+                <li><a href="../../pages/blog/index.html">Blog</a></li>
+                <li><a href="../../pages/contact/index.html">Contact</a></li>
+                <li><a href="../../pages/terms-and-condition/index.html">Terms</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary book-1">Book Now</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+            <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+            <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+            <li><a href="../../pages/about/index.html">About Us</a></li>
+            <li><a href="../../pages/blog/index.html">Blog</a></li>
+            <li><a href="../../pages/contact/index.html">Contact</a></li>
+            <li><a href="../../pages/terms-and-condition/index.html">Terms & Condition</a></li>
+            <li><a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+    <!-- Page Banner -->
+    <section class="hero" style="background-image: url('https://theconsorts.com/images/hero/consort_banner_1.png'); height: 50vh;">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Terms & Conditions</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="section">
+        <div class="container">
+            <div class="terms-container">
+                <h2>General Terms & Conditions</h2>
+                <ul>
+                    <li>The following General Terms and Conditions apply to rental contracts for The Consorts Hotels & Resorts and further services and deliveries provided by The Consorts Hotels & Resorts (hereinafter referred to as the "Hotel") for the client.</li>
+                    <li>Subletting and re-letting the rooms and their use for any purpose other than accommodation requires the hotel's written consent.</li>
+                    <li>The client's contrary conditions shall only apply before the written agreement.</li>
+                    <li>The entire stay, including any additional charges, must be settled upon check-in. We accept cash, credit cards, and bank transfers as payment methods.</li>
+                    <li>The client must pay the valid price to use the room and additional services, as contracted. These conditions also apply to the hotel's services and expenses towards the third arranged by the client.</li>
+                    <li>The Consorts Hotels & Resorts reserves the right to adjust prices if the client requires later amendments regarding the contracted number of rooms, hotel services, or length of stay, and the hotel agrees.</li>
+                    <li>Check-in time is 14:00 hours, and check-out time is 12:00 hours.</li>
+                    <li>Early morning arrivals before 12:00 hours will be booked from the previous night and charged accordingly.</li>
+                    <li>Cancellation/amendment within 48 hours is subject to a one-night charge.</li>
+                    <li>In case of a no-show, first-night room charges will apply.</li>
+                    <li>In case of early departure, the room will be charged for the entire stay.</li>
+                    <li>In case of any unforeseen circumstances like landsliding, road closure, flight cancellation or any natural disaster that have prevented you from travelling as planned, in accordance with our company policies, payments made for bookings are non-refundable. However, as a gesture of goodwill, we will hold your credit amount to be adjusted against any future bookings for a period of one year from the original booking date.</li>
+                    <li>Outside food is not allowed.</li>
+                    <li>Third-party credit card payment is not acceptable as per the regulations of the State Bank of Pakistan.</li>
+                    <li>A physical credit card is required to make payments from your credit card.</li>
+                    <li>Non-guaranteed room reservations will be held 24 hours before arrival; later rooms will be subject to availability.</li>
+                    <li>The Consorts Hotels & Resorts reserves the right to refuse service to any guest who violates hotel policies or behaves in a manner deemed disruptive or harmful to other guests or hotel staff. We may modify these terms and conditions without prior notice. By making a reservation and staying at The Consorts Hotels & Resorts, guests agree to abide by these terms and conditions. We hope you have a pleasant stay with us at The Consorts Hotels & Resorts. If you have any questions or concerns, please do not hesitate to contact our friendly staff.</li>
+                    <li>The Consorts Hotels & Resorts requests our valued guests to maintain discipline within the hotel premises.</li>
+                    <li>The Consorts Hotels & Resorts reserves the right to refuse service to any guest who violates hotel policies or behaves in a manner deemed disruptive or harmful to other guests or hotel staff.</li>
+                    <li>Guests are responsible for any damage or loss caused to the hotel property during their stay. The Consorts Hotels & Resorts reserves the right to charge the guests for damages or losses.</li>
+                    <li>The guests are requested to take care of their belongings. The Consorts Hotels & Resorts will not be held responsible if the guest has lost his belongings.</li>
+                    <li>The Consorts Hotels & Resorts reserves the right to modify or update the payment policy without prior notice.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Ready to Experience The Consorts Hotels?</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Book your stay now and create your own memories in this breathtaking location.</p>
+                <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" class="btn btn-primary btn-lg">Book Your Stay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with special offers, local events, and travel tips for Hunza Valley.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="mt-2" style="font-size:0.85rem; color:var(--text-muted);">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- partials/footer.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="height:75px; margin-bottom:1.2rem;">
+                <p>Experience eco-luxury at Attabad Lake with our unique container accommodations offering breathtaking views of Hunza Valley.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/theconsortshotel" target="_new" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/theconsortshotel" target="_new" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@the.consorts.hotel" target="_new" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@TheConsortsHotelsResorts" target="_new" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                    <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                    <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                    <li><a href="../../pages/about/index.html">About Us</a></li>
+                    <li><a href="../../pages/blog/index.html">Blog</a></li>
+                    <li><a href="../../pages/contact/index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Karakoram Highway, Attabad Lake, Hunza, Gilgit-Baltistan, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> Official: +92 332 6676787</li>
+                    <li><i class="fas fa-phone"></i> Front Desk: +92 355 5262622</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@theconsorts.com">info@theconsorts.com</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:reservations@theconsorts.com">reservations@theconsorts.com</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Policies</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="https://theconsorts.com/pages/terms-and-condition/index.html">Terms & Conditions</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Consorts Hotels & Resorts. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMobile.classList.toggle('open');
+            overlayBackdrop.classList.toggle('visible');
+            document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+        });
+        overlayBackdrop.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMobile.classList.remove('open');
+            overlayBackdrop.classList.remove('visible');
+            document.body.style.overflow = '';
+        });
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3X7J449DL"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H3X7J449DL');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223007346"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18223007346');</script>
+    <script>
+(function() {
+    function initHeader() {
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+        }
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+        if (hamburger && navMobile && overlayBackdrop) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMobile.classList.toggle('open');
+                overlayBackdrop.classList.toggle('visible');
+                document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+            });
+            overlayBackdrop.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+            document.querySelectorAll('.nav-mobile a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMobile.classList.remove('open');
+                    overlayBackdrop.classList.remove('visible');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+        let currentPath = window.location.pathname;
+        if (currentPath === '' || currentPath === '/') currentPath = '/index.html';
+        document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(link => {
+            let linkPath;
+            try { linkPath = new URL(link.getAttribute('href'), window.location.href).pathname; } catch (e) { return; }
+            if (linkPath === currentPath) link.classList.add('active');
+        });
+    }
+    initHeader();
+})();
+</script>
+</body>
+</html>

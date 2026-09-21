@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Rooms & Suites | The Consorts Hotels</title>
+    <meta name="description" content="Discover our unique container accommodations at The Consorts Hotels, offering breathtaking views of Attabad Lake and Hunza Valley.">
+
+    <link rel="shortcut icon" href="/images/logo/consort_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #151520;
+            --bg-card-hover: #1a1a28;
+            --bg-glass: rgba(18, 18, 28, 0.85);
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #a8883e;
+            --gold-glow: rgba(201, 169, 98, 0.15);
+            --gold-glow-strong: rgba(201, 169, 98, 0.3);
+            --text-primary: #f0ede8;
+            --text-secondary: #b0ada8;
+            --text-muted: #7a7875;
+            --text-gold: #d4b87a;
+            --border-dark: #2a2a35;
+            --border-light: #3a3a48;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.15);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+            --font-accent: 'Montserrat', sans-serif;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --container: 1280px;
+        }
+
+        *,
+        *::before,
+        *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: 0.01em;
+        }
+
+        ::selection { background: var(--gold); color: var(--bg-primary); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color var(--transition-fast); }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; background: none; font-family: var(--font-body); font-size: inherit; color: inherit; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; } .mb-2 { margin-bottom: 1rem; } .mb-3 { margin-bottom: 1.5rem; } .mb-4 { margin-bottom: 2rem; } .mb-5 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mt-3 { margin-top: 1.5rem; } .mt-4 { margin-top: 2rem; } .mt-5 { margin-top: 3rem; }
+        .w-100 { width: 100%; }
+
+        .subtitle {
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--text-primary); }
+        h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; line-height: 1.15; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+        h3 { font-size: 1.3rem; font-weight: 600; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.8rem 1.8rem; font-family: var(--font-accent); font-size: 0.85rem; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase; border-radius: var(--radius-full);
+            transition: all var(--transition-base); position: relative; overflow: hidden; white-space: nowrap;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: #0a0a0f; box-shadow: 0 4px 20px var(--gold-glow-strong); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--gold-glow-strong); background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #0a0a0f; }
+        .btn-secondary { background: transparent; color: var(--text-gold); border: 1px solid var(--gold-dark); }
+        .btn-secondary:hover { background: var(--gold-glow); border-color: var(--gold); transform: translateY(-2px); color: var(--gold-light); }
+        .btn-lg { padding: 1rem 2.4rem; font-size: 0.9rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.8rem 0; transition: all var(--transition-base); background: transparent; }
+        .header.scrolled { background: var(--bg-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); padding: 0.5rem 0; box-shadow: var(--shadow-sm); }
+        .header-container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .logo img { height: 44px; width: auto; transition: height var(--transition-base); filter: brightness(1.1); }
+        .header.scrolled .logo img { height: 38px; }
+        .nav-desktop ul { display: flex; align-items: center; gap: 0.3rem; }
+        .nav-desktop ul li a { padding: 0.5rem 1rem; font-family: var(--font-accent); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-full); transition: all var(--transition-fast); }
+        .nav-desktop ul li a:hover, .nav-desktop ul li a.active { color: var(--text-gold); background: var(--gold-glow); }
+        .book-1 { padding: 0.65rem 1.5rem; font-size: 0.78rem; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; z-index: 1001; }
+        .hamburger span { display: block; width: 28px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all var(--transition-base); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .hamburger.active span:nth-child(4) { transform: rotate(45deg) translate(-2px, -12px); }
+
+        .nav-mobile { position: fixed; top: 0; right: -100%; width: min(360px, 85vw); height: 100vh; background: var(--bg-secondary); border-left: 1px solid var(--border-dark); padding: 5rem 2rem 2rem; transition: right var(--transition-slow); z-index: 999; overflow-y: auto; box-shadow: var(--shadow-lg); }
+        .nav-mobile.open { right: 0; }
+        .nav-mobile ul { display: flex; flex-direction: column; gap: 0.3rem; }
+        .nav-mobile ul li a { display: block; padding: 0.9rem 1rem; font-family: var(--font-accent); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+        .nav-mobile ul li a:hover { color: var(--text-gold); background: var(--gold-glow); }
+        .nav-mobile .btn { margin-top: 1rem; width: 100%; }
+        .overlay-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 998; opacity: 0; visibility: hidden; transition: all var(--transition-base); }
+        .overlay-backdrop.visible { opacity: 1; visibility: visible; }
+
+        /* Hero */
+        .hero { position: relative; height: 50vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-size: cover; background-position: center; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,15,0.7) 0%, rgba(10,10,15,0.4) 50%, rgba(10,10,15,0.8) 100%); }
+        .hero .container { position: relative; z-index: 2; }
+        .hero h1 { color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.5); margin-bottom: 0.5rem; }
+        .hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; font-weight: 300; }
+
+        /* Sections */
+        .section { padding: 5rem 0; position: relative; }
+        .bg-light { background: var(--bg-secondary); }
+        .bg-white { background: var(--bg-primary); } /* override */
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+
+        /* Room Filters */
+        .room-filters { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 1.5rem; }
+        .filter-group { flex: 1; min-width: 180px; }
+        .filter-group label { display: block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; }
+        .filter-group select { width: 100%; background: var(--bg-secondary); border: 1px solid var(--border-dark); border-radius: var(--radius-sm); padding: 0.7rem 1rem; color: var(--text-primary); font-size: 0.9rem; outline: none; transition: border-color var(--transition-fast); }
+        .filter-group select:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px var(--gold-glow); }
+        .room-filters .btn { padding: 0.7rem 2rem; }
+
+        /* Room Detail Cards */
+        .room-detail { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 3rem; transition: all var(--transition-base); }
+        .room-detail:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); }
+        .room-detail-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+        .room-detail-image { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-dark); }
+        .room-detail-image img { width: 100%; height: 100%; object-fit: cover; min-height: 300px; }
+        .room-detail-info { display: flex; flex-direction: column; gap: 1.5rem; }
+        .room-detail-header h2 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .room-detail-meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+        .room-detail-meta span { display: flex; align-items: center; gap: 0.3rem; }
+        .room-detail-meta i { color: var(--gold); font-size: 0.8rem; }
+        .room-detail-price { font-size: 1.2rem; color: var(--text-gold); font-weight: 600; margin-top: 0.5rem; }
+        .room-detail-price .price { font-size: 2rem; display: inline; }
+        .room-summary p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
+        .room-detail-features h3 { font-size: 1.1rem; color: var(--gold-light); margin-bottom: 0.8rem; }
+        .amenity-paragraph { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-bottom: 1rem; }
+        .amenity-paragraph span { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.88rem; color: var(--text-secondary); }
+        .amenity-paragraph i { color: var(--gold); font-size: 0.8rem; }
+        .extra-features { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+        .hidden { display: none !important; }
+        .toggle-btn { background: transparent; border: 1px solid var(--gold-dark); color: var(--text-gold); padding: 0.4rem 1.2rem; border-radius: var(--radius-full); font-size: 0.8rem; font-family: var(--font-accent); letter-spacing: 0.05em; transition: all var(--transition-fast); margin-top: 0.5rem; }
+        .toggle-btn:hover { background: var(--gold-glow); border-color: var(--gold); }
+
+        .room-detail-buttons { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+        .room-detail-buttons .btn { padding: 0.7rem 1.8rem; }
+
+        /* Amenities Grid */
+        .amenities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; }
+        .amenity-item { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-md); padding: 1.8rem; text-align: center; transition: all var(--transition-base); }
+        .amenity-item:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); transform: translateY(-4px); }
+        .amenity-icon { width: 56px; height: 56px; margin: 0 auto 1rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gold-glow); border: 1px solid var(--gold-dark); color: var(--gold); font-size: 1.3rem; }
+        .amenity-item h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+        .amenity-item p { font-size: 0.85rem; color: var(--text-secondary); }
+
+        /* Policies */
+        .policies-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+        .policy-card { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-md); padding: 1.8rem; transition: all var(--transition-base); }
+        .policy-card:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); }
+        .policy-card h3 { font-size: 1.1rem; color: var(--gold-light); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+        .policy-card h3 i { color: var(--gold); }
+        .policy-card p { font-size: 0.9rem; color: var(--text-secondary); }
+        .policy-card ul { list-style: none; }
+        .policy-card li { font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem; position: relative; margin-bottom: 0.4rem; }
+        .policy-card li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+
+        /* Newsletter */
+        .newsletter { padding: 4rem 0; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+        .newsletter h2 { margin-bottom: 0.5rem; }
+        .newsletter p { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; }
+        .newsletter-form { display: flex; gap: 0.6rem; max-width: 500px; margin: 0 auto; }
+        .newsletter-form input { flex: 1; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-full); padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+        .newsletter-form input:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px var(--gold-glow); }
+        .newsletter-form button { padding: 0.85rem 2rem; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--bg-primary); border-radius: var(--radius-full); font-family: var(--font-accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: all var(--transition-base); white-space: nowrap; }
+        .newsletter-form button:hover { background: linear-gradient(135deg, var(--gold-light), var(--gold)); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+
+        /* Footer */
+        .footer { background: var(--bg-secondary); padding: 4rem 0 0; border-top: 1px solid var(--border-dark); }
+        .footer .row { grid-template-columns: 2fr 1fr 1.5fr 1fr; align-items: start; gap: 2.5rem; padding-bottom: 3rem; }
+        .footer h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-gold); margin-bottom: 1.2rem; }
+        .footer p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; }
+        .footer-social { display: flex; gap: 0.7rem; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.95rem; transition: all var(--transition-fast); }
+        .footer-social a:hover { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); transform: translateY(-3px); }
+        .footer-links li { margin-bottom: 0.7rem; font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 0.6rem; }
+        .footer-links li i { color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem; width: 16px; text-align: center; flex-shrink: 0; }
+        .footer-links a { color: var(--text-secondary); transition: color var(--transition-fast); }
+        .footer-links a:hover { color: var(--text-gold); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--border-dark); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 992px) {
+            .nav-desktop { display: none; }
+            .hamburger { display: flex; }
+            .book-1 { display: none; }
+            .room-detail-row { grid-template-columns: 1fr; }
+            .room-detail-image { min-height: 250px; }
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 3.5rem 0; }
+            .footer .row { grid-template-columns: 1fr; gap: 2rem; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form button { width: 100%; }
+            .room-filters { flex-direction: column; }
+            .filter-group { min-width: 100%; }
+            .hero { min-height: 300px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .header-container { padding: 0 1rem; }
+            .room-detail { padding: 1.5rem; }
+            .amenity-paragraph span { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <!-- partials/header.html -->
+<header class="header" id="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="filter: brightness(1.1);">
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                <li><a href="../../pages/about/index.html">About Us</a></li>
+                <li><a href="../../pages/blog/index.html">Blog</a></li>
+                <li><a href="../../pages/contact/index.html">Contact</a></li>
+                <li><a href="../../pages/terms-and-condition/index.html">Terms</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary book-1">Book Now</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+            <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+            <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+            <li><a href="../../pages/about/index.html">About Us</a></li>
+            <li><a href="../../pages/blog/index.html">Blog</a></li>
+            <li><a href="../../pages/contact/index.html">Contact</a></li>
+            <li><a href="../../pages/terms-and-condition/index.html">Terms & Condition</a></li>
+            <li><a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+    <!-- Page Banner -->
+    <section class="hero" style="background-image: url('https://theconsorts.com/images/hero/consort_banner_1.png'); height: 50vh;">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Rooms & Suites</h1>
+                <p>Experience comfort and luxury in our unique container accommodations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Filters -->
+    <section class="section">
+        <div class="container">
+            <div class="room-filters">
+                <div class="filter-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="view">View</label>
+                    <select id="view">
+                        <option value="all" selected>All Views</option>
+                        <option value="mountain">Mountain View</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Price Range</label>
+                    <select id="price">
+                        <option value="all" selected>All Prices</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms List -->
+    <!-- Deluxe Room Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="room-detail">
+                <div class="room-detail-row">
+                    <div class="room-detail-image">
+                        <img src="https://theconsorts.com/images/rooms/000-3.jpg" alt="Deluxe Room">
+                    </div>
+                    <div class="room-detail-info">
+                        <div class="room-detail-split">
+                            <div class="room-summary">
+                                <div class="room-detail-header">
+                                    <h2>Deluxe Room</h2>
+                                    <div class="room-detail-meta">
+                                        <span><i class="fas fa-user-friends"></i> 2 Guests</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 25 m²</span>
+                                    </div>
+                                </div>
+                                <p>Our Deluxe Rooms offer a warm and comfortable retreat, thoughtfully designed for a relaxing stay in Hunza. Featuring cozy interiors, modern amenities, and a calm atmosphere, these rooms are ideal for guests seeking comfort, convenience, and a peaceful rest after a day of exploration.</p>
+                            </div>
+                            <div class="room-detail-features">
+                                <h3>Room Features</h3>
+                                <div class="amenity-paragraph toggle-features">
+                                    <span><i class="fas fa-tint"></i> Centralized Hot Water</span>
+                                    <span><i class="fas fa-fire"></i> Centralized Room Heating</span>
+                                    <span><i class="fas fa-warehouse"></i> Cupboard</span>
+                                    <span><i class="fas fa-mug-hot"></i> Coffee Table</span>
+                                    <span><i class="fas fa-couch"></i> Convertible Sofa Bed</span>
+                                    <div class="extra-features hidden">
+                                        <span><i class="fas fa-lock"></i> Electronic Safe</span>
+                                        <span><i class="fas fa-wifi"></i> WIFI</span>
+                                        <span><i class="fas fa-phone"></i> Intercom</span>
+                                        <span><i class="fas fa-snowflake"></i> Room Fridge</span>
+                                        <span><i class="fas fa-tv"></i> Android TV</span>
+                                        <span><i class="fas fa-bath"></i> High-Quality Toiletries</span>
+                                        <span><i class="fas fa-coffee"></i> Tea & Coffee Making Facility</span>
+                                        <span><i class="fas fa-window-maximize"></i> Big Glass Window</span>
+                                        <span><i class="fas fa-wind"></i> Hair Dryer</span>
+                                    </div>
+                                    <button class="toggle-btn" onclick="toggleFeatures(this)">Show More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-detail-buttons">
+                            <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a>
+                            <a href="https://theconsorts.com/pages/gallery/index.html" class="btn btn-secondary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contemporary Suite Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="room-detail">
+                <div class="room-detail-row">
+                    <div class="room-detail-image">
+                        <img src="https://theconsorts.com/images/rooms/000-28.jpg" alt="Contemporary Suite">
+                    </div>
+                    <div class="room-detail-info">
+                        <div class="room-detail-split">
+                            <div class="room-summary">
+                                <div class="room-detail-header">
+                                    <h2>Contemporary With Balcony</h2>
+                                    <div class="room-detail-meta">
+                                        <span><i class="fas fa-user-friends"></i> 2 Guests</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 30 m²</span>
+                                    </div>
+                                </div>
+                                <p>Our Contemporary Suites are designed for guests who appreciate space and comfort in a modern setting. Featuring stylish interiors, a private balcony, and thoughtful amenities, these suites offer a relaxed and refreshing stay—perfect for unwinding while enjoying the calm of Hunza.</p>
+                            </div>
+                            <div class="room-detail-features">
+                                <h3>Room Features</h3>
+                                <div class="amenity-paragraph toggle-features">
+                                    <span><i class="fas fa-cube"></i> Fabricated Containers</span>
+                                    <span><i class="fas fa-tint"></i> Centralized Hot Water</span>
+                                    <span><i class="fas fa-fire"></i> Centralized Room Heating</span>
+                                    <span><i class="fas fa-warehouse"></i> Cupboard</span>
+                                    <span><i class="fas fa-mug-hot"></i> Coffee Table</span>
+                                    <div class="extra-features hidden">
+                                        <span><i class="fas fa-couch"></i> Convertible Sofa Bed</span>
+                                        <span><i class="fas fa-lock"></i> Electronic Safe</span>
+                                        <span><i class="fas fa-wifi"></i> WIFI</span>
+                                        <span><i class="fas fa-phone"></i> Intercom</span>
+                                        <span><i class="fas fa-snowflake"></i> Room Fridge</span>
+                                        <span><i class="fas fa-tv"></i> Android TV</span>
+                                        <span><i class="fas fa-bath"></i> High-Quality Toiletries</span>
+                                        <span><i class="fas fa-coffee"></i> Tea & Coffee Making Facility</span>
+                                        <span><i class="fas fa-arrow-up"></i> Bedrooms Elevated in The Air</span>
+                                        <span><i class="fas fa-wind"></i> Hair Dryer</span>
+                                        <span><i class="fas fa-chair"></i> Personal Balcony</span>
+                                        <span><i class="fas fa-couch"></i> Living Room</span>
+                                    </div>
+                                    <button class="toggle-btn" onclick="toggleFeatures(this)">Show More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-detail-buttons">
+                            <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a>
+                            <a href="https://theconsorts.com/pages/gallery/index.html" class="btn btn-secondary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclusive Suite Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="room-detail">
+                <div class="room-detail-row">
+                    <div class="room-detail-image">
+                        <img src="https://theconsorts.com/images/rooms/000-32.jpg" alt="Exclusive Suite">
+                    </div>
+                    <div class="room-detail-info">
+                        <div class="room-detail-split">
+                            <div class="room-summary">
+                                <div class="room-detail-header">
+                                    <h2>Exclusive With Infinity View & Balcony</h2>
+                                    <div class="room-detail-meta">
+                                        <span><i class="fas fa-user-friends"></i> 2–4 Guests</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 45 m²</span>
+                                        <span><i class="fas fa-mountain"></i> Panoramic View</span>
+                                    </div>
+                                </div>
+                                <p>Our Exclusive Suites offer a spacious and refined stay designed for guests seeking extra comfort and privacy. Featuring elegant interiors, a private balcony, and uninterrupted infinity views, these suites provide a serene setting to relax, unwind, and fully enjoy the beauty of Hunza.</p>
+                            </div>
+                            <div class="room-detail-features">
+                                <h3>Room Features</h3>
+                                <div class="amenity-paragraph toggle-features">
+                                    <span><i class="fas fa-cube"></i> Fabricated Containers</span>
+                                    <span><i class="fas fa-tint"></i> Centralized Hot Water</span>
+                                    <span><i class="fas fa-fire"></i> Centralized Room Heating</span>
+                                    <span><i class="fas fa-warehouse"></i> Cupboard</span>
+                                    <span><i class="fas fa-mug-hot"></i> Coffee Table</span>
+                                    <span><i class="fas fa-mountain-sun"></i> Lake View Bedroom</span>
+                                    <div class="extra-features hidden">
+                                        <span><i class="fas fa-couch"></i> Convertible Sofa Bed</span>
+                                        <span><i class="fas fa-lock"></i> Electronic Safe</span>
+                                        <span><i class="fas fa-wifi"></i> WIFI</span>
+                                        <span><i class="fas fa-phone"></i> Intercom</span>
+                                        <span><i class="fas fa-snowflake"></i> Room Fridge</span>
+                                        <span><i class="fas fa-tv"></i> Android TV</span>
+                                        <span><i class="fas fa-bath"></i> High-Quality Toiletries</span>
+                                        <span><i class="fas fa-coffee"></i> Tea & Coffee Making Facility</span>
+                                        <span><i class="fas fa-arrow-up"></i> Bedrooms Elevated in The Air</span>
+                                        <span><i class="fas fa-wind"></i> Hair Dryer</span>
+                                        <span><i class="fas fa-chair"></i> Personal Balcony</span>
+                                        <span><i class="fas fa-couch"></i> Living Room</span>
+                                    </div>
+                                    <button class="toggle-btn" onclick="toggleFeatures(this)">Show More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-detail-buttons">
+                            <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a>
+                            <a href="https://theconsorts.com/pages/gallery/index.html" class="btn btn-secondary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="section section-amenities">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Comfort & Convenience</p>
+                <h2>Amenities</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Designed for comfort, convenience, and style</p>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>High-Speed Wi-Fi</h3>
+                    <p>Complimentary high-speed internet access throughout the property</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-snowflake"></i></div>
+                    <h3>Climate Control</h3>
+                    <p>Individual temperature control in each room for your comfort</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-bath"></i></div>
+                    <h3>Luxury Toiletries</h3>
+                    <p>Eco-friendly premium toiletries made with local ingredients</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-bed"></i></div>
+                    <h3>Premium Bedding</h3>
+                    <p>High-quality linens and pillows for a restful sleep</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-coffee"></i></div>
+                    <h3>Coffee & Tea</h3>
+                    <p>In-room coffee and tea making facilities with local selections</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-tv"></i></div>
+                    <h3>Smart TV</h3>
+                    <p>Flat-screen smart TVs with streaming capabilities</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-lock"></i></div>
+                    <h3>In-Room Safe</h3>
+                    <p>Electronic safe large enough for laptops and valuables</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3>Laundry Service</h3>
+                    <p>Same-day laundry and pressing services available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Policy -->
+    <section class="section bg-light policy-section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Important Information</p>
+                <h2>Booking Policies</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Please review our policies before making your reservation</p>
+            </div>
+            <div class="policies-grid">
+                <div class="policy-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Check-in & Check-out</h3>
+                    <ul>
+                        <li>Check-in time: 2:00 PM</li>
+                        <li>Check-out time: 12:00 PM</li>
+                        <li>Early check-in and late check-out available upon request</li>
+                        <li>24-hour front desk service</li>
+                    </ul>
+                </div>
+                <div class="policy-card">
+                    <h3><i class="fas fa-credit-card"></i> Payment & Deposits</h3>
+                    <p>The entire stay, including any additional charges, must be settled upon check-in. We accept cash, credit cards, and bank transfers as payment methods.</p>
+                </div>
+                <div class="policy-card">
+                    <h3><i class="fas fa-ban"></i> Cancellation Policy</h3>
+                    <p>Cancellation/amendment within 48 hours is subject to a one-night charge. In case of a no-show, first-night room charges will apply. In case of unforeseen circumstances like landslides, road closures, or flight cancellations, payments are non-refundable but can be held as credit for future bookings (valid for 1 year).</p>
+                </div>
+                <div class="policy-card">
+                    <h3><i class="fas fa-child"></i> Children & Extra Beds</h3>
+                    <p>2 Adults & 1 Child under 10 Years enjoy complimentary breakfast. Children aged 10–15: 50% breakfast charge. 15+ years: full breakfast + PKR 5,000 for room sharing. Extra mattress: PKR 1,500.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Ready to Experience The Consorts Hotels?</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Book your stay now and create your own memories in this breathtaking location.</p>
+                <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" class="btn btn-primary btn-lg">Book Your Stay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with special offers, local events, and travel tips for Hunza Valley.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="mt-2" style="font-size:0.85rem; color:var(--text-muted);">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- partials/footer.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="height:75px; margin-bottom:1.2rem;">
+                <p>Experience eco-luxury at Attabad Lake with our unique container accommodations offering breathtaking views of Hunza Valley.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/theconsortshotel" target="_new" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/theconsortshotel" target="_new" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@the.consorts.hotel" target="_new" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@TheConsortsHotelsResorts" target="_new" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                    <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                    <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                    <li><a href="../../pages/about/index.html">About Us</a></li>
+                    <li><a href="../../pages/blog/index.html">Blog</a></li>
+                    <li><a href="../../pages/contact/index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Karakoram Highway, Attabad Lake, Hunza, Gilgit-Baltistan, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> Official: +92 332 6676787</li>
+                    <li><i class="fas fa-phone"></i> Front Desk: +92 355 5262622</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@theconsorts.com">info@theconsorts.com</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:reservations@theconsorts.com">reservations@theconsorts.com</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Policies</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="https://theconsorts.com/pages/terms-and-condition/index.html">Terms & Conditions</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Consorts Hotels & Resorts. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMobile.classList.toggle('open');
+            overlayBackdrop.classList.toggle('visible');
+            document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+        });
+        overlayBackdrop.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMobile.classList.remove('open');
+            overlayBackdrop.classList.remove('visible');
+            document.body.style.overflow = '';
+        });
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Toggle features
+        function toggleFeatures(button) {
+            const container = button.closest('.toggle-features');
+            const extra = container.querySelector('.extra-features');
+            if (extra.classList.contains('hidden')) {
+                extra.classList.remove('hidden');
+                button.textContent = 'Show Less';
+            } else {
+                extra.classList.add('hidden');
+                button.textContent = 'Show More';
+            }
+        }
+        window.toggleFeatures = toggleFeatures;
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3X7J449DL"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H3X7J449DL');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223007346"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18223007346');</script>
+    <script>
+(function() {
+    function initHeader() {
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+        }
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+        if (hamburger && navMobile && overlayBackdrop) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMobile.classList.toggle('open');
+                overlayBackdrop.classList.toggle('visible');
+                document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+            });
+            overlayBackdrop.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+            document.querySelectorAll('.nav-mobile a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMobile.classList.remove('open');
+                    overlayBackdrop.classList.remove('visible');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+        let currentPath = window.location.pathname;
+        if (currentPath === '' || currentPath === '/') currentPath = '/index.html';
+        document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(link => {
+            let linkPath;
+            try { linkPath = new URL(link.getAttribute('href'), window.location.href).pathname; } catch (e) { return; }
+            if (linkPath === currentPath) link.classList.add('active');
+        });
+    }
+    initHeader();
+})();
+</script>
+</body>
+</html>

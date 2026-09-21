@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Gallery | The Consorts Hotels</title>
+    <meta name="description" content="Explore our photo gallery showcasing the unique container accommodations, stunning lake views, and beautiful surroundings of The Consorts Hotels at Attabad Lake.">
+
+    <link rel="shortcut icon" href="/images/logo/consort_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #151520;
+            --bg-card-hover: #1a1a28;
+            --bg-glass: rgba(18, 18, 28, 0.85);
+            --bg-glass-light: rgba(20, 20, 30, 0.7);
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #a8883e;
+            --gold-glow: rgba(201, 169, 98, 0.15);
+            --gold-glow-strong: rgba(201, 169, 98, 0.3);
+            --text-primary: #f0ede8;
+            --text-secondary: #b0ada8;
+            --text-muted: #7a7875;
+            --text-gold: #d4b87a;
+            --border-dark: #2a2a35;
+            --border-light: #3a3a48;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.15);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+            --font-accent: 'Montserrat', sans-serif;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --container: 1280px;
+        }
+
+        *,
+        *::before,
+        *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: 0.01em;
+        }
+
+        ::selection { background: var(--gold); color: var(--bg-primary); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color var(--transition-fast); }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; background: none; font-family: var(--font-body); font-size: inherit; color: inherit; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; } .mb-2 { margin-bottom: 1rem; } .mb-3 { margin-bottom: 1.5rem; } .mb-4 { margin-bottom: 2rem; } .mb-5 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mt-3 { margin-top: 1.5rem; } .mt-4 { margin-top: 2rem; }
+
+        .subtitle {
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--text-primary); }
+        h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; line-height: 1.15; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+        h3 { font-size: 1.3rem; font-weight: 600; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.8rem 1.8rem; font-family: var(--font-accent); font-size: 0.85rem; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase; border-radius: var(--radius-full);
+            transition: all var(--transition-base); position: relative; overflow: hidden; white-space: nowrap;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: #0a0a0f; box-shadow: 0 4px 20px var(--gold-glow-strong); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--gold-glow-strong); background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #0a0a0f; }
+        .btn-secondary { background: transparent; color: var(--text-gold); border: 1px solid var(--gold-dark); }
+        .btn-secondary:hover { background: var(--gold-glow); border-color: var(--gold); transform: translateY(-2px); color: var(--gold-light); }
+        .btn-lg { padding: 1rem 2.4rem; font-size: 0.9rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.8rem 0; transition: all var(--transition-base); background: transparent; }
+        .header.scrolled { background: var(--bg-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); padding: 0.5rem 0; box-shadow: var(--shadow-sm); }
+        .header-container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .logo img { height: 44px; width: auto; transition: height var(--transition-base); filter: brightness(1.1); }
+        .header.scrolled .logo img { height: 38px; }
+        .nav-desktop ul { display: flex; align-items: center; gap: 0.3rem; }
+        .nav-desktop ul li a { padding: 0.5rem 1rem; font-family: var(--font-accent); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-full); transition: all var(--transition-fast); }
+        .nav-desktop ul li a:hover, .nav-desktop ul li a.active { color: var(--text-gold); background: var(--gold-glow); }
+        .book-1 { padding: 0.65rem 1.5rem; font-size: 0.78rem; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; z-index: 1001; }
+        .hamburger span { display: block; width: 28px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all var(--transition-base); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .hamburger.active span:nth-child(4) { transform: rotate(45deg) translate(-2px, -12px); }
+
+        .nav-mobile { position: fixed; top: 0; right: -100%; width: min(360px, 85vw); height: 100vh; background: var(--bg-secondary); border-left: 1px solid var(--border-dark); padding: 5rem 2rem 2rem; transition: right var(--transition-slow); z-index: 999; overflow-y: auto; box-shadow: var(--shadow-lg); }
+        .nav-mobile.open { right: 0; }
+        .nav-mobile ul { display: flex; flex-direction: column; gap: 0.3rem; }
+        .nav-mobile ul li a { display: block; padding: 0.9rem 1rem; font-family: var(--font-accent); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+        .nav-mobile ul li a:hover { color: var(--text-gold); background: var(--gold-glow); }
+        .nav-mobile .btn { margin-top: 1rem; width: 100%; }
+        .overlay-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 998; opacity: 0; visibility: hidden; transition: all var(--transition-base); }
+        .overlay-backdrop.visible { opacity: 1; visibility: visible; }
+
+        /* Hero */
+        .hero { position: relative; height: 50vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-size: cover; background-position: center; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,15,0.7) 0%, rgba(10,10,15,0.4) 50%, rgba(10,10,15,0.8) 100%); }
+        .hero .container { position: relative; z-index: 2; }
+        .hero h1 { color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.5); margin-bottom: 0.5rem; }
+        .hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; font-weight: 300; }
+
+        /* Sections */
+        .section { padding: 5rem 0; position: relative; }
+        .bg-light { background: var(--bg-secondary); }
+        .bg-white { background: var(--bg-primary); }
+
+        /* Gallery Filters */
+        .gallery-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+        .filter-btn {
+            padding: 0.7rem 1.6rem;
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-dark);
+            background: transparent;
+            color: var(--text-secondary);
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+        .filter-btn:hover { border-color: var(--gold-dark); color: var(--text-gold); }
+        .filter-btn.active { background: var(--gold-glow); border-color: var(--gold); color: var(--gold); }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-dark);
+            background: var(--bg-card);
+            transition: all var(--transition-base);
+            aspect-ratio: 4 / 3;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-dark);
+            box-shadow: var(--shadow-gold);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item a { display: block; height: 100%; }
+
+        /* Video Cards */
+        .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: start; }
+        .video-card { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }
+        .video-card:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); transform: translateY(-5px); }
+        .video-thumbnail { position: relative; cursor: pointer; overflow: hidden; aspect-ratio: 16 / 9; }
+        .video-thumbnail img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+        .video-thumbnail:hover img { transform: scale(1.05); }
+        .video-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 1.6rem;
+            transition: all var(--transition-base);
+        }
+        .video-thumbnail:hover .video-play-button { background: var(--gold); color: var(--bg-primary); }
+        .video-content { padding: 1rem 1.2rem 1.2rem; }
+        .video-content h3 { font-size: 1.1rem; }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 85vh;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .modal-content video {
+            width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            display: block;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2rem;
+            color: var(--text-primary);
+            z-index: 2001;
+            cursor: pointer;
+            transition: color var(--transition-fast);
+        }
+        .close-button:hover { color: var(--gold); }
+
+        /* Newsletter */
+        .newsletter { padding: 4rem 0; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+        .newsletter h2 { margin-bottom: 0.5rem; }
+        .newsletter p { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; }
+        .newsletter-form { display: flex; gap: 0.6rem; max-width: 500px; margin: 0 auto; }
+        .newsletter-form input { flex: 1; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-full); padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+        .newsletter-form input:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px var(--gold-glow); }
+        .newsletter-form button { padding: 0.85rem 2rem; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--bg-primary); border-radius: var(--radius-full); font-family: var(--font-accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: all var(--transition-base); white-space: nowrap; }
+        .newsletter-form button:hover { background: linear-gradient(135deg, var(--gold-light), var(--gold)); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+
+        /* Footer */
+        .footer { background: var(--bg-secondary); padding: 4rem 0 0; border-top: 1px solid var(--border-dark); }
+        .footer .row { grid-template-columns: 2fr 1fr 1.5fr 1fr; align-items: start; gap: 2.5rem; padding-bottom: 3rem; }
+        .footer h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-gold); margin-bottom: 1.2rem; }
+        .footer p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; }
+        .footer-social { display: flex; gap: 0.7rem; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.95rem; transition: all var(--transition-fast); }
+        .footer-social a:hover { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); transform: translateY(-3px); }
+        .footer-links li { margin-bottom: 0.7rem; font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 0.6rem; }
+        .footer-links li i { color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem; width: 16px; text-align: center; flex-shrink: 0; }
+        .footer-links a { color: var(--text-secondary); transition: color var(--transition-fast); }
+        .footer-links a:hover { color: var(--text-gold); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--border-dark); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 992px) {
+            .nav-desktop { display: none; }
+            .hamburger { display: flex; }
+            .book-1 { display: none; }
+            .row { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 3.5rem 0; }
+            .footer .row { grid-template-columns: 1fr; gap: 2rem; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form button { width: 100%; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+            .hero { min-height: 300px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .header-container { padding: 0 1rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+   <!-- partials/header.html -->
+<header class="header" id="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="filter: brightness(1.1);">
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                <li><a href="../../pages/about/index.html">About Us</a></li>
+                <li><a href="../../pages/blog/index.html">Blog</a></li>
+                <li><a href="../../pages/contact/index.html">Contact</a></li>
+                <li><a href="../../pages/terms-and-condition/index.html">Terms</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary book-1">Book Now</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+            <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+            <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+            <li><a href="../../pages/about/index.html">About Us</a></li>
+            <li><a href="../../pages/blog/index.html">Blog</a></li>
+            <li><a href="../../pages/contact/index.html">Contact</a></li>
+            <li><a href="../../pages/terms-and-condition/index.html">Terms & Condition</a></li>
+            <li><a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+    <!-- Page Banner -->
+    <section class="hero" style="background-image: url('https://theconsorts.com/images/hero/consort_banner_2.png'); height: 50vh;">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Gallery</h1>
+                <p>Explore our unique container accommodations and stunning surroundings</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Deluxe-Room">Deluxe Room</button>
+                <button class="filter-btn" data-filter="Contemporary-With-Balcony">Contemporary With Balcony</button>
+                <button class="filter-btn" data-filter="Exclusive-With-Infinity">Exclusive With Infinity</button>
+                <button class="filter-btn" data-filter="Drone-Shots">Drone Shots</button>
+                <button class="filter-btn" data-filter="Exterior">Exterior</button>
+                <button class="filter-btn" data-filter="Restaurant-Food">Restaurant & Food</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Deluxe Room (11 items) -->
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/01.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 1"><img src="https://theconsorts.com/images/photos/01.jpg" alt="Deluxe 1"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/02.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 2"><img src="https://theconsorts.com/images/photos/02.jpg" alt="Deluxe 2"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/03.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 3"><img src="https://theconsorts.com/images/photos/03.jpg" alt="Deluxe 3"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/04.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 4"><img src="https://theconsorts.com/images/photos/04.jpg" alt="Deluxe 4"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/05.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 5"><img src="https://theconsorts.com/images/photos/05.jpg" alt="Deluxe 5"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/06.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 6"><img src="https://theconsorts.com/images/photos/06.jpg" alt="Deluxe 6"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/07.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 7"><img src="https://theconsorts.com/images/photos/07.jpg" alt="Deluxe 7"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/08.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 8"><img src="https://theconsorts.com/images/photos/08.jpg" alt="Deluxe 8"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/09.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 9"><img src="https://theconsorts.com/images/photos/09.jpg" alt="Deluxe 9"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/10.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 10"><img src="https://theconsorts.com/images/photos/10.jpg" alt="Deluxe 10"></a></div>
+                <div class="gallery-item" data-category="Deluxe-Room"><a href="https://theconsorts.com/images/photos/11.jpg" data-lightbox="hotel-gallery" data-title="Deluxe Room - 11"><img src="https://theconsorts.com/images/photos/11.jpg" alt="Deluxe 11"></a></div>
+
+                <!-- Contemporary With Balcony (20 items) -->
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/12.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 12"><img src="https://theconsorts.com/images/photos/12.jpg" alt="Contemporary 12"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/13.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 13"><img src="https://theconsorts.com/images/photos/13.jpg" alt="Contemporary 13"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/14.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 14"><img src="https://theconsorts.com/images/photos/14.jpg" alt="Contemporary 14"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/15.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 15"><img src="https://theconsorts.com/images/photos/15.jpg" alt="Contemporary 15"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/16.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 16"><img src="https://theconsorts.com/images/photos/16.jpg" alt="Contemporary 16"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/17.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 17"><img src="https://theconsorts.com/images/photos/17.jpg" alt="Contemporary 17"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/18.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 18"><img src="https://theconsorts.com/images/photos/18.jpg" alt="Contemporary 18"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/19.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 19"><img src="https://theconsorts.com/images/photos/19.jpg" alt="Contemporary 19"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/20.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 20"><img src="https://theconsorts.com/images/photos/20.jpg" alt="Contemporary 20"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/21.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 21"><img src="https://theconsorts.com/images/photos/21.jpg" alt="Contemporary 21"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/22.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 22"><img src="https://theconsorts.com/images/photos/22.jpg" alt="Contemporary 22"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/23.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 23"><img src="https://theconsorts.com/images/photos/23.jpg" alt="Contemporary 23"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/24.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 24"><img src="https://theconsorts.com/images/photos/24.jpg" alt="Contemporary 24"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/25.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 25"><img src="https://theconsorts.com/images/photos/25.jpg" alt="Contemporary 25"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/26.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 26"><img src="https://theconsorts.com/images/photos/26.jpg" alt="Contemporary 26"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/27.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 27"><img src="https://theconsorts.com/images/photos/27.jpg" alt="Contemporary 27"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/28.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 28"><img src="https://theconsorts.com/images/photos/28.jpg" alt="Contemporary 28"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/29.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 29"><img src="https://theconsorts.com/images/photos/29.jpg" alt="Contemporary 29"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/30.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 30"><img src="https://theconsorts.com/images/photos/30.jpg" alt="Contemporary 30"></a></div>
+                <div class="gallery-item" data-category="Contemporary-With-Balcony"><a href="https://theconsorts.com/images/photos/31.jpg" data-lightbox="hotel-gallery" data-title="Contemporary 31"><img src="https://theconsorts.com/images/photos/31.jpg" alt="Contemporary 31"></a></div>
+
+                <!-- Exclusive With Infinity (10 items) -->
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/32.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 32"><img src="https://theconsorts.com/images/photos/32.jpg" alt="Exclusive 32"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/33.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 33"><img src="https://theconsorts.com/images/photos/33.jpg" alt="Exclusive 33"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/34.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 34"><img src="https://theconsorts.com/images/photos/34.jpg" alt="Exclusive 34"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/35.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 35"><img src="https://theconsorts.com/images/photos/35.jpg" alt="Exclusive 35"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/36.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 36"><img src="https://theconsorts.com/images/photos/36.jpg" alt="Exclusive 36"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/37.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 37"><img src="https://theconsorts.com/images/photos/37.jpg" alt="Exclusive 37"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/38.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 38"><img src="https://theconsorts.com/images/photos/38.jpg" alt="Exclusive 38"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/39.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 39"><img src="https://theconsorts.com/images/photos/39.jpg" alt="Exclusive 39"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/40.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 40"><img src="https://theconsorts.com/images/photos/40.jpg" alt="Exclusive 40"></a></div>
+                <div class="gallery-item" data-category="Exclusive-With-Infinity"><a href="https://theconsorts.com/images/photos/41.jpg" data-lightbox="hotel-gallery" data-title="Exclusive 41"><img src="https://theconsorts.com/images/photos/41.jpg" alt="Exclusive 41"></a></div>
+
+                <!-- Drone Shots (23 items) -->
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/42.jpg" data-lightbox="hotel-gallery" data-title="Drone 42"><img src="https://theconsorts.com/images/photos/42.jpg" alt="Drone 42"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/43.jpg" data-lightbox="hotel-gallery" data-title="Drone 43"><img src="https://theconsorts.com/images/photos/43.jpg" alt="Drone 43"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/44.jpg" data-lightbox="hotel-gallery" data-title="Drone 44"><img src="https://theconsorts.com/images/photos/44.jpg" alt="Drone 44"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/45.jpg" data-lightbox="hotel-gallery" data-title="Drone 45"><img src="https://theconsorts.com/images/photos/45.jpg" alt="Drone 45"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/46.jpg" data-lightbox="hotel-gallery" data-title="Drone 46"><img src="https://theconsorts.com/images/photos/46.jpg" alt="Drone 46"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/47.jpg" data-lightbox="hotel-gallery" data-title="Drone 47"><img src="https://theconsorts.com/images/photos/47.jpg" alt="Drone 47"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/48.jpg" data-lightbox="hotel-gallery" data-title="Drone 48"><img src="https://theconsorts.com/images/photos/48.jpg" alt="Drone 48"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/49.jpg" data-lightbox="hotel-gallery" data-title="Drone 49"><img src="https://theconsorts.com/images/photos/49.jpg" alt="Drone 49"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/50.jpg" data-lightbox="hotel-gallery" data-title="Drone 50"><img src="https://theconsorts.com/images/photos/50.jpg" alt="Drone 50"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/51.jpg" data-lightbox="hotel-gallery" data-title="Drone 51"><img src="https://theconsorts.com/images/photos/51.jpg" alt="Drone 51"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/52.jpg" data-lightbox="hotel-gallery" data-title="Drone 52"><img src="https://theconsorts.com/images/photos/52.jpg" alt="Drone 52"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/53.jpg" data-lightbox="hotel-gallery" data-title="Drone 53"><img src="https://theconsorts.com/images/photos/53.jpg" alt="Drone 53"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/54.jpg" data-lightbox="hotel-gallery" data-title="Drone 54"><img src="https://theconsorts.com/images/photos/54.jpg" alt="Drone 54"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/55.jpg" data-lightbox="hotel-gallery" data-title="Drone 55"><img src="https://theconsorts.com/images/photos/55.jpg" alt="Drone 55"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/56.jpg" data-lightbox="hotel-gallery" data-title="Drone 56"><img src="https://theconsorts.com/images/photos/56.jpg" alt="Drone 56"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/57.jpg" data-lightbox="hotel-gallery" data-title="Drone 57"><img src="https://theconsorts.com/images/photos/57.jpg" alt="Drone 57"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/58.jpg" data-lightbox="hotel-gallery" data-title="Drone 58"><img src="https://theconsorts.com/images/photos/58.jpg" alt="Drone 58"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/59.jpg" data-lightbox="hotel-gallery" data-title="Drone 59"><img src="https://theconsorts.com/images/photos/59.jpg" alt="Drone 59"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/60.jpg" data-lightbox="hotel-gallery" data-title="Drone 60"><img src="https://theconsorts.com/images/photos/60.jpg" alt="Drone 60"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/61.jpg" data-lightbox="hotel-gallery" data-title="Drone 61"><img src="https://theconsorts.com/images/photos/61.jpg" alt="Drone 61"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/62.jpg" data-lightbox="hotel-gallery" data-title="Drone 62"><img src="https://theconsorts.com/images/photos/62.jpg" alt="Drone 62"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/63.jpg" data-lightbox="hotel-gallery" data-title="Drone 63"><img src="https://theconsorts.com/images/photos/63.jpg" alt="Drone 63"></a></div>
+                <div class="gallery-item" data-category="Drone-Shots"><a href="https://theconsorts.com/images/photos/64.jpg" data-lightbox="hotel-gallery" data-title="Drone 64"><img src="https://theconsorts.com/images/photos/64.jpg" alt="Drone 64"></a></div>
+
+                <!-- Exterior (items 65-101) -->
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/65.jpg" data-lightbox="hotel-gallery" data-title="Exterior 65"><img src="https://theconsorts.com/images/photos/65.jpg" alt="Exterior 65"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/66.jpg" data-lightbox="hotel-gallery" data-title="Exterior 66"><img src="https://theconsorts.com/images/photos/66.jpg" alt="Exterior 66"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/67.jpg" data-lightbox="hotel-gallery" data-title="Exterior 67"><img src="https://theconsorts.com/images/photos/67.jpg" alt="Exterior 67"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/68.jpg" data-lightbox="hotel-gallery" data-title="Exterior 68"><img src="https://theconsorts.com/images/photos/68.jpg" alt="Exterior 68"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/69.jpg" data-lightbox="hotel-gallery" data-title="Exterior 69"><img src="https://theconsorts.com/images/photos/69.jpg" alt="Exterior 69"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/70.jpg" data-lightbox="hotel-gallery" data-title="Exterior 70"><img src="https://theconsorts.com/images/photos/70.jpg" alt="Exterior 70"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/71.jpg" data-lightbox="hotel-gallery" data-title="Exterior 71"><img src="https://theconsorts.com/images/photos/71.jpg" alt="Exterior 71"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/72.jpg" data-lightbox="hotel-gallery" data-title="Exterior 72"><img src="https://theconsorts.com/images/photos/72.jpg" alt="Exterior 72"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/73.jpg" data-lightbox="hotel-gallery" data-title="Exterior 73"><img src="https://theconsorts.com/images/photos/73.jpg" alt="Exterior 73"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/74.jpg" data-lightbox="hotel-gallery" data-title="Exterior 74"><img src="https://theconsorts.com/images/photos/74.jpg" alt="Exterior 74"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/75.jpg" data-lightbox="hotel-gallery" data-title="Exterior 75"><img src="https://theconsorts.com/images/photos/75.jpg" alt="Exterior 75"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/76.jpg" data-lightbox="hotel-gallery" data-title="Exterior 76"><img src="https://theconsorts.com/images/photos/76.jpg" alt="Exterior 76"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/77.jpg" data-lightbox="hotel-gallery" data-title="Exterior 77"><img src="https://theconsorts.com/images/photos/77.jpg" alt="Exterior 77"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/78.jpg" data-lightbox="hotel-gallery" data-title="Exterior 78"><img src="https://theconsorts.com/images/photos/78.jpg" alt="Exterior 78"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/82.jpg" data-lightbox="hotel-gallery" data-title="Exterior 82"><img src="https://theconsorts.com/images/photos/82.jpg" alt="Exterior 82"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/83.jpg" data-lightbox="hotel-gallery" data-title="Exterior 83"><img src="https://theconsorts.com/images/photos/83.jpg" alt="Exterior 83"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/85.jpg" data-lightbox="hotel-gallery" data-title="Exterior 85"><img src="https://theconsorts.com/images/photos/85.jpg" alt="Exterior 85"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/86.jpg" data-lightbox="hotel-gallery" data-title="Exterior 86"><img src="https://theconsorts.com/images/photos/86.jpg" alt="Exterior 86"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/87.jpg" data-lightbox="hotel-gallery" data-title="Exterior 87"><img src="https://theconsorts.com/images/photos/87.jpg" alt="Exterior 87"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/89.jpg" data-lightbox="hotel-gallery" data-title="Exterior 89"><img src="https://theconsorts.com/images/photos/89.jpg" alt="Exterior 89"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/90.jpg" data-lightbox="hotel-gallery" data-title="Exterior 90"><img src="https://theconsorts.com/images/photos/90.jpg" alt="Exterior 90"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/91.jpg" data-lightbox="hotel-gallery" data-title="Exterior 91"><img src="https://theconsorts.com/images/photos/91.jpg" alt="Exterior 91"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/92.jpg" data-lightbox="hotel-gallery" data-title="Exterior 92"><img src="https://theconsorts.com/images/photos/92.jpg" alt="Exterior 92"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/93.jpg" data-lightbox="hotel-gallery" data-title="Exterior 93"><img src="https://theconsorts.com/images/photos/93.jpg" alt="Exterior 93"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/97.jpg" data-lightbox="hotel-gallery" data-title="Exterior 97"><img src="https://theconsorts.com/images/photos/97.jpg" alt="Exterior 97"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/98.jpg" data-lightbox="hotel-gallery" data-title="Exterior 98"><img src="https://theconsorts.com/images/photos/98.jpg" alt="Exterior 98"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/99.jpg" data-lightbox="hotel-gallery" data-title="Exterior 99"><img src="https://theconsorts.com/images/photos/99.jpg" alt="Exterior 99"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/100.jpg" data-lightbox="hotel-gallery" data-title="Exterior 100"><img src="https://theconsorts.com/images/photos/100.jpg" alt="Exterior 100"></a></div>
+                <div class="gallery-item" data-category="Exterior"><a href="https://theconsorts.com/images/photos/101.jpg" data-lightbox="hotel-gallery" data-title="Exterior 101"><img src="https://theconsorts.com/images/photos/101.jpg" alt="Exterior 101"></a></div>
+
+                <!-- Restaurant & Food (103-112) -->
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/103.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 103"><img src="https://theconsorts.com/images/photos/103.jpg" alt="Restaurant 103"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/104.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 104"><img src="https://theconsorts.com/images/photos/104.jpg" alt="Restaurant 104"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/105.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 105"><img src="https://theconsorts.com/images/photos/105.jpg" alt="Restaurant 105"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/106.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 106"><img src="https://theconsorts.com/images/photos/106.jpg" alt="Restaurant 106"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/107.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 107"><img src="https://theconsorts.com/images/photos/107.jpg" alt="Restaurant 107"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/108.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 108"><img src="https://theconsorts.com/images/photos/108.jpg" alt="Restaurant 108"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/109.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 109"><img src="https://theconsorts.com/images/photos/109.jpg" alt="Restaurant 109"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/110.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 110"><img src="https://theconsorts.com/images/photos/110.jpg" alt="Restaurant 110"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/111.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 111"><img src="https://theconsorts.com/images/photos/111.jpg" alt="Restaurant 111"></a></div>
+                <div class="gallery-item" data-category="Restaurant-Food"><a href="https://theconsorts.com/images/photos/112.jpg" data-lightbox="hotel-gallery" data-title="Restaurant 112"><img src="https://theconsorts.com/images/photos/112.jpg" alt="Restaurant 112"></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Moving Images</p>
+                <h2>Video Gallery</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Watch videos showcasing our hotel and the stunning Hunza Valley</p>
+            </div>
+
+            <div class="row">
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openVideoModal(this)" data-attr="https://theconsorts.com/images/video/Deluxe_Room.mp4">
+                        <img src="https://theconsorts.com/images/video/video_thumbnail.jpg" alt="Deluxe Room">
+                        <div class="video-play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-content"><h3>Deluxe Room</h3></div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openVideoModal(this)" data-attr="https://theconsorts.com/images/video/Contemporary_With_Balcony.mp4">
+                        <img src="https://theconsorts.com/images/video/Contemporary_image.jpg" alt="Contemporary">
+                        <div class="video-play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-content"><h3>Contemporary With Balcony</h3></div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openVideoModal(this)" data-attr="https://theconsorts.com/images/video/Exclusive_With_Infinity_View_Balcony.mp4">
+                        <img src="https://theconsorts.com/images/photos/33.jpg" alt="Exclusive">
+                        <div class="video-play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-content"><h3>Exclusive With Infinity View</h3></div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openVideoModal(this)" data-attr="https://theconsorts.com/images/video/Amenities.mp4">
+                        <img src="https://theconsorts.com/images/video/amenities_video.jpg" alt="Amenities">
+                        <div class="video-play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-content"><h3>Amenities</h3></div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openVideoModal(this)" data-attr="https://theconsorts.com/images/video/Activities-Attractions.mp4">
+                        <img src="https://theconsorts.com/images/photos/101.jpg" alt="Activities">
+                        <div class="video-play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-content"><h3>Activities</h3></div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openVideoModal(this)" data-attr="https://theconsorts.com/images/video/Consorts_Youtube_Video_2.mp4">
+                        <img src="https://theconsorts.com/images/video/video_thumbnail.jpg" alt="YouTube">
+                        <div class="video-play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-content"><h3>YouTube Video</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Ready to Experience The Consorts Hotels?</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Book your stay now and create your own memories in this breathtaking location.</p>
+                <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" class="btn btn-primary btn-lg">Book Your Stay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with special offers, local events, and travel tips for Hunza Valley.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="mt-2" style="font-size:0.85rem; color:var(--text-muted);">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- partials/footer.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="height:75px; margin-bottom:1.2rem;">
+                <p>Experience eco-luxury at Attabad Lake with our unique container accommodations offering breathtaking views of Hunza Valley.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/theconsortshotel" target="_new" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/theconsortshotel" target="_new" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@the.consorts.hotel" target="_new" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@TheConsortsHotelsResorts" target="_new" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                    <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                    <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                    <li><a href="../../pages/about/index.html">About Us</a></li>
+                    <li><a href="../../pages/blog/index.html">Blog</a></li>
+                    <li><a href="../../pages/contact/index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Karakoram Highway, Attabad Lake, Hunza, Gilgit-Baltistan, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> Official: +92 332 6676787</li>
+                    <li><i class="fas fa-phone"></i> Front Desk: +92 355 5262622</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@theconsorts.com">info@theconsorts.com</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:reservations@theconsorts.com">reservations@theconsorts.com</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Policies</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="https://theconsorts.com/pages/terms-and-condition/index.html">Terms & Conditions</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Consorts Hotels & Resorts. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal" onclick="outsideClick(event)">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeVideoModal()">&times;</span>
+            <video id="popupVideo" controls autoplay>
+                <source src="" type="video/mp4" id="videoSource">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3X7J449DL"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H3X7J449DL');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223007346"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18223007346');</script>
+
+    <script>
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMobile.classList.toggle('open');
+            overlayBackdrop.classList.toggle('visible');
+            document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+        });
+        overlayBackdrop.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMobile.classList.remove('open');
+            overlayBackdrop.classList.remove('visible');
+            document.body.style.overflow = '';
+        });
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Gallery filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filterValue = this.getAttribute('data-filter');
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox config
+        if (typeof lightbox !== 'undefined') {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': 'Image %1 of %2'
+            });
+        }
+
+        // Video modal functions
+        function openVideoModal(element) {
+            const videoUrl = element.getAttribute('data-attr');
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('popupVideo');
+            const source = document.getElementById('videoSource');
+            source.src = videoUrl;
+            video.load();
+            modal.style.display = 'flex';
+            video.play();
+        }
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('popupVideo');
+            modal.style.display = 'none';
+            video.pause();
+            video.currentTime = 0;
+        }
+        function outsideClick(event) {
+            const modal = document.getElementById('videoModal');
+            const modalContent = document.querySelector('.modal-content');
+            if (!modalContent.contains(event.target)) {
+                closeVideoModal();
+            }
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') closeVideoModal();
+        });
+    </script>
+    <script>
+(function() {
+    function initHeader() {
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+        }
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+        if (hamburger && navMobile && overlayBackdrop) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMobile.classList.toggle('open');
+                overlayBackdrop.classList.toggle('visible');
+                document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+            });
+            overlayBackdrop.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+            document.querySelectorAll('.nav-mobile a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMobile.classList.remove('open');
+                    overlayBackdrop.classList.remove('visible');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+        let currentPath = window.location.pathname;
+        if (currentPath === '' || currentPath === '/') currentPath = '/index.html';
+        document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(link => {
+            let linkPath;
+            try { linkPath = new URL(link.getAttribute('href'), window.location.href).pathname; } catch (e) { return; }
+            if (linkPath === currentPath) link.classList.add('active');
+        });
+    }
+    initHeader();
+})();
+</script>
+</body>
+</html>

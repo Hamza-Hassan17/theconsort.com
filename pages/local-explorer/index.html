@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Local Explorer | The Consorts Hotels</title>
+    <meta name="description" content="Discover the best attractions, dining options, and hidden gems around Attabad Lake and Hunza Valley with our comprehensive local explorer guide.">
+
+    <link rel="shortcut icon" href="/images/logo/consort_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #151520;
+            --bg-card-hover: #1a1a28;
+            --bg-glass: rgba(18, 18, 28, 0.85);
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #a8883e;
+            --gold-glow: rgba(201, 169, 98, 0.15);
+            --gold-glow-strong: rgba(201, 169, 98, 0.3);
+            --text-primary: #f0ede8;
+            --text-secondary: #b0ada8;
+            --text-muted: #7a7875;
+            --text-gold: #d4b87a;
+            --border-dark: #2a2a35;
+            --border-light: #3a3a48;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.15);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+            --font-accent: 'Montserrat', sans-serif;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --container: 1280px;
+        }
+
+        *,
+        *::before,
+        *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: 0.01em;
+        }
+
+        ::selection { background: var(--gold); color: var(--bg-primary); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color var(--transition-fast); }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; background: none; font-family: var(--font-body); font-size: inherit; color: inherit; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; } .mb-2 { margin-bottom: 1rem; } .mb-3 { margin-bottom: 1.5rem; } .mb-4 { margin-bottom: 2rem; } .mb-5 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mt-3 { margin-top: 1.5rem; } .mt-4 { margin-top: 2rem; } .mt-5 { margin-top: 3rem; }
+
+        .subtitle {
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--text-primary); }
+        h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+        h3 { font-size: 1.3rem; font-weight: 600; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.8rem 1.8rem; font-family: var(--font-accent); font-size: 0.85rem; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase; border-radius: var(--radius-full);
+            transition: all var(--transition-base); position: relative; overflow: hidden; white-space: nowrap;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: #0a0a0f; box-shadow: 0 4px 20px var(--gold-glow-strong); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--gold-glow-strong); background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #0a0a0f; }
+        .btn-secondary { background: transparent; color: var(--text-gold); border: 1px solid var(--gold-dark); }
+        .btn-secondary:hover { background: var(--gold-glow); border-color: var(--gold); transform: translateY(-2px); color: var(--gold-light); }
+        .btn-lg { padding: 1rem 2.4rem; font-size: 0.9rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.8rem 0; transition: all var(--transition-base); background: transparent; }
+        .header.scrolled { background: var(--bg-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); padding: 0.5rem 0; box-shadow: var(--shadow-sm); }
+        .header-container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .logo img { height: 44px; width: auto; transition: height var(--transition-base); filter: brightness(1.1); }
+        .header.scrolled .logo img { height: 38px; }
+        .nav-desktop ul { display: flex; align-items: center; gap: 0.3rem; }
+        .nav-desktop ul li a { padding: 0.5rem 1rem; font-family: var(--font-accent); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-full); transition: all var(--transition-fast); }
+        .nav-desktop ul li a:hover, .nav-desktop ul li a.active { color: var(--text-gold); background: var(--gold-glow); }
+        .book-1 { padding: 0.65rem 1.5rem; font-size: 0.78rem; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; z-index: 1001; }
+        .hamburger span { display: block; width: 28px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all var(--transition-base); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .hamburger.active span:nth-child(4) { transform: rotate(45deg) translate(-2px, -12px); }
+
+        .nav-mobile { position: fixed; top: 0; right: -100%; width: min(360px, 85vw); height: 100vh; background: var(--bg-secondary); border-left: 1px solid var(--border-dark); padding: 5rem 2rem 2rem; transition: right var(--transition-slow); z-index: 999; overflow-y: auto; box-shadow: var(--shadow-lg); }
+        .nav-mobile.open { right: 0; }
+        .nav-mobile ul { display: flex; flex-direction: column; gap: 0.3rem; }
+        .nav-mobile ul li a { display: block; padding: 0.9rem 1rem; font-family: var(--font-accent); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+        .nav-mobile ul li a:hover { color: var(--text-gold); background: var(--gold-glow); }
+        .nav-mobile .btn { margin-top: 1rem; width: 100%; }
+        .overlay-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 998; opacity: 0; visibility: hidden; transition: all var(--transition-base); }
+        .overlay-backdrop.visible { opacity: 1; visibility: visible; }
+
+        /* Hero */
+        .hero { position: relative; height: 50vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-size: cover; background-position: center; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,15,0.7) 0%, rgba(10,10,15,0.4) 50%, rgba(10,10,15,0.8) 100%); }
+        .hero .container { position: relative; z-index: 2; }
+        .hero h1 { color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.5); margin-bottom: 0.5rem; }
+        .hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; font-weight: 300; }
+
+        /* Sections */
+        .section { padding: 5rem 0; position: relative; }
+        .bg-light { background: var(--bg-secondary); }
+        .bg-white { background: var(--bg-primary); }
+
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+
+        /* Feature Cards */
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition-base);
+            height: 100%;
+        }
+        .feature-card:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); transform: translateY(-6px); }
+        .feature-icon { width: 64px; height: 64px; margin: 0 auto 1.2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gold-glow); border: 1px solid var(--gold-dark); color: var(--gold); font-size: 1.5rem; transition: all var(--transition-base); }
+        .feature-card:hover .feature-icon { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); transform: scale(1.1); }
+        .feature-card h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+        .feature-card p { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* Attraction Cards */
+        .attraction-card { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 2rem; transition: all var(--transition-base); }
+        .attraction-card:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); }
+        .attraction-image { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-dark); }
+        .attraction-image img { width: 100%; height: 100%; object-fit: cover; min-height: 250px; }
+        .attraction-content h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .attraction-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .attraction-distance { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-gold); background: var(--gold-glow); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); border: 1px solid var(--gold-dark); }
+        .attraction-content p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; }
+        .attraction-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+        .attraction-detail h4 { font-size: 1rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+        .attraction-detail ul { list-style: none; }
+        .attraction-detail li { font-size: 0.88rem; color: var(--text-secondary); padding-left: 1.2rem; position: relative; margin-bottom: 0.3rem; }
+        .attraction-detail li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+        .attraction-insider { background: var(--gold-glow); border-left: 3px solid var(--gold); padding: 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+        .attraction-insider h4 { color: var(--gold); font-size: 0.9rem; margin-bottom: 0.4rem; }
+        .attraction-insider p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0; }
+
+        /* Local Area Guide */
+        .section-guide { background: var(--bg-primary); }
+        .tabs { margin-top: 2rem; }
+        .tabs-nav { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 2rem; }
+        .tab-btn {
+            padding: 0.7rem 1.8rem;
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-dark);
+            background: transparent;
+            color: var(--text-secondary);
+            transition: all var(--transition-base);
+        }
+        .tab-btn:hover { border-color: var(--gold-dark); color: var(--text-gold); }
+        .tab-btn.active { background: var(--gold-glow); border-color: var(--gold); color: var(--gold); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-header { margin-bottom: 2rem; }
+        .tab-header h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+        .tab-header p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .local-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            transition: all var(--transition-base);
+            height: 100%;
+        }
+        .local-card:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); transform: translateY(-4px); }
+        .local-card h4 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+        .local-meta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-muted); }
+        .local-meta span { display: flex; align-items: center; gap: 0.3rem; }
+        .local-meta i { color: var(--gold); font-size: 0.8rem; }
+        .local-card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; }
+        .local-highlight { background: var(--gold-glow); padding: 0.8rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-gold); }
+        .service-list { list-style: none; }
+        .service-list li { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.8rem; padding-left: 1.2rem; position: relative; }
+        .service-list li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+
+        /* Itinerary */
+        .section-itenerary .tabs-nav { margin-bottom: 2rem; }
+        .itinerary { display: flex; flex-direction: column; gap: 1.5rem; }
+        .itinerary-item { display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem; align-items: start; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-md); padding: 1.5rem; transition: all var(--transition-base); }
+        .itinerary-item:hover { border-color: var(--gold-dark); }
+        .itinerary-time { font-family: var(--font-accent); font-weight: 600; color: var(--gold); font-size: 0.9rem; }
+        .itinerary-content h4 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .itinerary-content p { font-size: 0.88rem; color: var(--text-secondary); }
+
+        /* Season Cards */
+        .season-card { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); height: 100%; }
+        .season-card:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); transform: translateY(-4px); }
+        .season-header { padding: 1.2rem; text-align: center; }
+        .season-header h3 { color: var(--bg-primary); font-size: 1.3rem; margin: 0; }
+        .season-content { padding: 1.5rem; }
+        .season-content p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; }
+        .season-content h4 { font-size: 0.95rem; color: var(--gold-light); margin-bottom: 0.4rem; margin-top: 1rem; }
+        .season-content ul { list-style: none; margin-bottom: 1rem; }
+        .season-content li { font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; position: relative; margin-bottom: 0.3rem; }
+        .season-content li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+
+        /* Newsletter */
+        .newsletter { padding: 4rem 0; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+        .newsletter h2 { margin-bottom: 0.5rem; }
+        .newsletter p { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; }
+        .newsletter-form { display: flex; gap: 0.6rem; max-width: 500px; margin: 0 auto; }
+        .newsletter-form input { flex: 1; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-full); padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+        .newsletter-form input:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px var(--gold-glow); }
+        .newsletter-form button { padding: 0.85rem 2rem; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--bg-primary); border-radius: var(--radius-full); font-family: var(--font-accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: all var(--transition-base); white-space: nowrap; }
+        .newsletter-form button:hover { background: linear-gradient(135deg, var(--gold-light), var(--gold)); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+
+        /* Footer */
+        .footer { background: var(--bg-secondary); padding: 4rem 0 0; border-top: 1px solid var(--border-dark); }
+        .footer .row { grid-template-columns: 2fr 1fr 1.5fr 1fr; align-items: start; gap: 2.5rem; padding-bottom: 3rem; }
+        .footer h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-gold); margin-bottom: 1.2rem; }
+        .footer p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; }
+        .footer-social { display: flex; gap: 0.7rem; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.95rem; transition: all var(--transition-fast); }
+        .footer-social a:hover { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); transform: translateY(-3px); }
+        .footer-links li { margin-bottom: 0.7rem; font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 0.6rem; }
+        .footer-links li i { color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem; width: 16px; text-align: center; flex-shrink: 0; }
+        .footer-links a { color: var(--text-secondary); transition: color var(--transition-fast); }
+        .footer-links a:hover { color: var(--text-gold); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--border-dark); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 992px) {
+            .nav-desktop { display: none; }
+            .hamburger { display: flex; }
+            .book-1 { display: none; }
+            .row { grid-template-columns: 1fr; }
+            .attraction-details { grid-template-columns: 1fr; }
+            .itinerary-item { grid-template-columns: 1fr; gap: 0.5rem; }
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 3.5rem 0; }
+            .footer .row { grid-template-columns: 1fr; gap: 2rem; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form button { width: 100%; }
+            .hero { min-height: 300px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .header-container { padding: 0 1rem; }
+            .tabs-nav { flex-direction: column; align-items: stretch; }
+            .tab-btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <!-- partials/header.html -->
+<header class="header" id="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="filter: brightness(1.1);">
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                <li><a href="../../pages/about/index.html">About Us</a></li>
+                <li><a href="../../pages/blog/index.html">Blog</a></li>
+                <li><a href="../../pages/contact/index.html">Contact</a></li>
+                <li><a href="../../pages/terms-and-condition/index.html">Terms</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary book-1">Book Now</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+            <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+            <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+            <li><a href="../../pages/about/index.html">About Us</a></li>
+            <li><a href="../../pages/blog/index.html">Blog</a></li>
+            <li><a href="../../pages/contact/index.html">Contact</a></li>
+            <li><a href="../../pages/terms-and-condition/index.html">Terms & Condition</a></li>
+            <li><a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+    <!-- Page Banner -->
+    <section class="hero" style="background-image: url('https://theconsorts.com/images/hero/000.jpg?no=cache'); height: 50vh;">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Local Explorer</h1>
+                <p>Discover the natural wonders and cultural treasures of Hunza Valley</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="subtitle">Your Guide to Hunza Valley</p>
+                <h2>Explore the Region from The Consorts Hunza</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">The Consorts Hotels is ideally located in the heart of Hunza, making it the perfect base for exploring the magnificent valley. Our Local Explorer guide provides all the essential information you need to discover the region’s natural wonders, cultural heritage, and hidden gems.</p>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <h3>Area Attractions</h3>
+                        <p>Discover breathtaking natural wonders and historic sites within easy reach of our hotel, complete with insider tips and practical information.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Local Area Guide</h3>
+                        <p>Find the best restaurants, cafés, shops, and hidden gems in Hunza Valley, curated by our local experts who know the region intimately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area Attractions -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Must-See Destinations</p>
+                <h2>Area Attractions</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Explore these remarkable destinations during your stay at The Consorts Hotels</p>
+            </div>
+
+            <!-- Attraction 1: Attabad Lake -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Attabad Lake</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> On-site</div>
+                            </div>
+                            <p>Created in 2010 following a massive landslide, Attabad Lake has transformed into one of Pakistan's most stunning natural attractions...</p>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Boat tours (available directly from our hotel)</li>
+                                        <li>Jet skiing and water sports (seasonal)</li>
+                                        <li>Lakeside photography</li>
+                                        <li>Swimming (summer months)</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: May to October</li>
+                                        <li>Boat tour cost: PKR 1,000–2,500 per person</li>
+                                        <li>Photography: Unrestricted</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The lake’s color is most vibrant in the early morning and late afternoon. For the best photographs, join our sunrise boat tour...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/attabad-lake.jpg" alt="Attabad Lake"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attraction 2: Hussaini Bridge -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Hussaini Bridge</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 15 minutes (35 km)</div>
+                            </div>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/hussaini_bridge.png" alt="Hussaini Bridge"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attraction 3: Borith Lake -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/borith_lake.png" alt="Borith Lake"></div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Borith Lake</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 20 minutes (20 km)</div>
+                            </div>
+                            <p>Dating back over 700 years, Baltit Fort is an ancient fortress perched on a hill above Karimabad, the capital of Hunza Valley. This UNESCO World Heritage Site offers a fascinating glimpse into the region's history and the lives of the former rulers of Hunza.</p>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Guided tours of the fort interior</li>
+                                        <li>Museum exhibits of local artifacts</li>
+                                        <li>Panoramic views of Hunza Valley</li>
+                                        <li>Photography of traditional architecture</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Open: 9:00 AM - 5:00 PM (closed Tuesdays)</li>
+                                        <li>Entrance fee: PKR 500 for foreigners</li>
+                                        <li>Guided tours available in English</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>Visit in the late afternoon when most tour groups have left. The light is perfect for photography, and you'll have a more intimate experience with the knowledgeable local guides who can share fascinating stories about the fort's history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passu Glacier -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Passu Glacier</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 25 minutes (35 km)</div>
+                            </div>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/passu_glacier.png" alt="Passu Glacier"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passu Cones -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/passu_cones_1.png" alt="Passu Cones"></div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Passu Cones</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 30 minutes (35 km)</div>
+                            </div>
+                            <p>The iconic Passu Cones (also known as Passu Cathedral) are a series of dramatic, jagged mountain peaks that create one of the most photographed landscapes in Pakistan. These distinctive spires rise dramatically above the village of Passu, creating a scene of otherworldly beauty.</p>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sost Bazar -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Sost Bazar</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 1hour 30 minutes (35 km)</div>
+                            </div>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/sost_bazar.png" alt="Sost Bazar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khunjerab Pass -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/khunjarab_pass.png" alt="Khunjerab Pass"></div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Khunjerab Pass</h3>
+                                <p>China Border</p>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 30 minutes (35 km)</div>
+                            </div>
+                            <p>The iconic Passu Cones (also known as Passu Cathedral) are a series of dramatic, jagged mountain peaks that create one of the most photographed landscapes in Pakistan. These distinctive spires rise dramatically above the village of Passu, creating a scene of otherworldly beauty.</p>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rock Carving Site -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Rock Carving Site</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 20 minutes (35 km)</div>
+                            </div>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/rock_carving.png" alt="Rock Carving"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hopper Glacier -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/happy_glacier.png" alt="Hopper Glacier"></div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Hopper Glacier</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 1hour 30 minutes (35 km)</div>
+                            </div>
+                            <p>The iconic Passu Cones (also known as Passu Cathedral) are a series of dramatic, jagged mountain peaks that create one of the most photographed landscapes in Pakistan. These distinctive spires rise dramatically above the village of Passu, creating a scene of otherworldly beauty.</p>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ganish Valley -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Ganish Valley</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 25 minutes (35 km)</div>
+                            </div>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/ganish_valley.png" alt="Ganish Valley"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Altit Fort -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/altit_fort.png" alt="Altit Fort"></div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Altit Fort</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 40 minutes (35 km)</div>
+                            </div>
+                            <p>The iconic Passu Cones (also known as Passu Cathedral) are a series of dramatic, jagged mountain peaks that create one of the most photographed landscapes in Pakistan. These distinctive spires rise dramatically above the village of Passu, creating a scene of otherworldly beauty.</p>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eagle Nest -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Eagle Nest</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 1hr 20 minutes (35 km)</div>
+                            </div>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/eagle_nest.png" alt="Eagle Nest"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karimabad Bazaar -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/karimabad_bazaar.png" alt="Karimabad Bazaar"></div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Karimabad Bazaar</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 40 minutes (35 km)</div>
+                            </div>
+                            <p>The iconic Passu Cones (also known as Passu Cathedral) are a series of dramatic, jagged mountain peaks that create one of the most photographed landscapes in Pakistan. These distinctive spires rise dramatically above the village of Passu, creating a scene of otherworldly beauty.</p>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baltit Fort -->
+            <div class="attraction-card mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="attraction-content">
+                            <div class="attraction-header">
+                                <h3>Baltit Fort</h3>
+                                <div class="attraction-distance"><i class="fas fa-map-marker-alt"></i> 50 minutes (35 km)</div>
+                            </div>
+                            <div class="attraction-details">
+                                <div class="attraction-detail">
+                                    <h4>Activities</h4>
+                                    <ul>
+                                        <li>Photography from multiple viewpoints</li>
+                                        <li>Hiking to panoramic viewpoints</li>
+                                        <li>Visit to Passu Glacier</li>
+                                        <li>Cultural exploration of Passu village</li>
+                                    </ul>
+                                </div>
+                                <div class="attraction-detail">
+                                    <h4>Visitor Information</h4>
+                                    <ul>
+                                        <li>Best time to visit: June to October</li>
+                                        <li>Best viewpoint: Karakoram Highway viewpoint</li>
+                                        <li>No entrance fee</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="attraction-insider">
+                                <h4><i class="fas fa-lightbulb"></i> Insider Tip</h4>
+                                <p>The most spectacular view of the Passu Cones is from a specific point on the Karakoram Highway where the peaks are perfectly framed. Ask our concierge for the exact location, which most tourists miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="attraction-image"><img src="https://theconsorts.com/images/local-explorer/baltit_fort_1.png" alt="Baltit Fort"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-secondary">View All Attractions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Area Guide -->
+    <section class="section section-guide">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Local Recommendations</p>
+                <h2>Local Area Guide</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Discover the best dining, shopping, and hidden gems in Hunza Valley</p>
+            </div>
+
+            <div class="tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="shopping">Shopping</button>
+                    <button class="tab-btn" data-tab="hidden-gems">Hidden Gems</button>
+                    <button class="tab-btn" data-tab="services">Essential Services</button>
+                </div>
+
+                <!-- Shopping Tab -->
+                <div class="tab-content active" id="shopping">
+                    <div class="tab-header">
+                        <h3>Shopping Destinations</h3>
+                        <p>Find authentic local crafts, souvenirs, and specialty food products</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Karimabad Bazaar</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-store"></i> Crafts, Textiles, Souvenirs</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Karimabad (25 min drive)</span>
+                                </div>
+                                <p>The main shopping area in Hunza Valley, offering a wide range of local crafts, textiles, and souvenirs. Look for hand-embroidered caps, walnut wood carvings, and gemstone jewelry.</p>
+                                <div class="local-highlight"><strong>Best buys:</strong> Hand-embroidered Hunza caps, walnut wood carvings, local gemstones</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Women's Handicraft Center</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-store"></i> Textiles, Embroidery</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Karimabad (25 min drive)</span>
+                                </div>
+                                <p>A cooperative supporting local women artisans, offering high-quality handmade textiles and embroidery. All purchases directly support the local women who create these beautiful items.</p>
+                                <div class="local-highlight"><strong>Best buys:</strong> Hand-embroidered shawls, traditional dresses, table linens</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Hunza Food Products</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-store"></i> Organic Food Products</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Aliabad (15 min drive)</span>
+                                </div>
+                                <p>Specializing in organic dried fruits, nuts, and local specialty foods from Hunza Valley. Their products are known for exceptional quality and are produced using traditional methods.</p>
+                                <div class="local-highlight"><strong>Best buys:</strong> Dried apricots, mulberries, walnuts, organic honey, apricot oil</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Passu Carpet Workshop</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-store"></i> Carpets, Rugs</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Passu (45 min drive)</span>
+                                </div>
+                                <p>A traditional carpet workshop where you can watch local artisans create beautiful hand-knotted carpets using ancient techniques. Each piece tells a story through its patterns and colors.</p>
+                                <div class="local-highlight"><strong>Best buys:</strong> Hand-knotted carpets, small rugs, wall hangings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Gems Tab -->
+                <div class="tab-content" id="hidden-gems">
+                    <div class="tab-header">
+                        <h3>Hidden Gems & Local Favorites</h3>
+                        <p>Discover lesser-known spots that offer authentic experiences away from the tourist crowds</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Ondra Fort</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-landmark"></i> Historical Site</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Gulmit (20 min drive)</span>
+                                </div>
+                                <p>While most tourists visit Baltit Fort, this lesser-known fortress offers a more authentic experience without the crowds. The caretaker often provides personal tours with fascinating historical insights.</p>
+                                <div class="local-highlight"><strong>Don't miss:</strong> The rooftop view of Gulmit village and surrounding mountains</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Borith Lake</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-water"></i> Natural Site</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Near Gulmit (30 min drive)</span>
+                                </div>
+                                <p>A serene high-altitude lake that's often overlooked by tourists. The lake is a birdwatcher's paradise and offers spectacular views of Passu Glacier. A small hike from the road leads to this tranquil spot.</p>
+                                <div class="local-highlight"><strong>Don't miss:</strong> Sunrise birdwatching, traditional tea at the lakeside café</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Khunjerab Wildlife Sanctuary</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-paw"></i> Wildlife Viewing</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 2 hours drive</span>
+                                </div>
+                                <p>While many visitors go to Khunjerab Pass, few explore the wildlife sanctuary where you can spot rare species like the Marco Polo sheep, snow leopard, and Himalayan ibex with the help of local guides.</p>
+                                <div class="local-highlight"><strong>Don't miss:</strong> Early morning wildlife viewing, local guide insights</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Traditional Music Evening</h4>
+                                <div class="local-meta">
+                                    <span><i class="fas fa-music"></i> Cultural Experience</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Karimabad (25 min drive)</span>
+                                </div>
+                                <p>Every Friday evening, a local family hosts traditional music performances in their home. This authentic cultural experience includes traditional instruments, songs, and stories about Hunza heritage.</p>
+                                <div class="local-highlight"><strong>Don't miss:</strong> Learning to play traditional instruments, joining in the dancing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Essential Services Tab -->
+                <div class="tab-content" id="services">
+                    <div class="tab-header">
+                        <h3>Essential Services</h3>
+                        <p>Practical information for your stay in Hunza Valley</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Medical Facilities</h4>
+                                <ul class="service-list">
+                                    <li><strong>Aga Khan Medical Center</strong><br>Aliabad, 15 min drive<br>Open 24/7 for emergencies<br>Phone: +92 346 589 7412</li>
+                                    <li><strong>Hunza Valley Clinic</strong><br>Karimabad, 25 min drive<br>Hours: 9:00 AM - 6:00 PM<br>Phone: +92 355 678 1234</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Pharmacies</h4>
+                                <ul class="service-list">
+                                    <li><strong>Aliabad Pharmacy</strong><br>Aliabad, 15 min drive<br>Hours: 8:00 AM - 10:00 PM<br>Phone: +92 346 123 4567</li>
+                                    <li><strong>Karimabad Medical Store</strong><br>Karimabad, 25 min drive<br>Hours: 9:00 AM - 9:00 PM<br>Phone: +92 355 987 6543</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Banks & ATMs</h4>
+                                <ul class="service-list">
+                                    <li><strong>HBL Bank</strong><br>Aliabad, 15 min drive<br>ATM available 24/7<br>Currency exchange available</li>
+                                    <li><strong>National Bank of Pakistan</strong><br>Karimabad, 25 min drive<br>ATM available 24/7</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="local-card h-100">
+                                <h4>Mobile & Internet</h4>
+                                <ul class="service-list">
+                                    <li><strong>Best Network Coverage</strong><br>SCOM and Jazz provide the most reliable coverage in Hunza Valley</li>
+                                    <li><strong>SIM Card Purchase</strong><br>Available at Aliabad market (15 min drive)<br>Passport required for registration</li>
+                                    <li><strong>Internet Cafés</strong><br>Karimabad Internet Zone (25 min drive)<br>Hours: 9:00 AM - 9:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Itineraries -->
+    <section class="section section-itenerary bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Perfect Day Plans</p>
+                <h2>Curated Itineraries</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Follow these expertly crafted day plans designed for different types of travelers</p>
+            </div>
+
+            <div class="tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="first-time">First-Time Visitor</button>
+                    <button class="tab-btn" data-tab="off-beaten">Off-the-Beaten-Path</button>
+                    <button class="tab-btn" data-tab="family">Family-Friendly</button>
+                </div>
+
+                <!-- First-Time Visitor Tab -->
+                <div class="tab-content active" id="first-time">
+                    <div class="tab-header">
+                        <h3>First-Time Visitor's Classic Experience</h3>
+                        <p>The perfect introduction to Hunza Valley's highlights</p>
+                    </div>
+                    <div class="itinerary">
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">7:00 AM</div>
+                            <div class="itinerary-content"><h4>Sunrise at The Consorts Hotels</h4><p>Begin your day with the spectacular sight of sunrise over Attabad Lake from your private balcony. The early morning light creates a magical glow on the turquoise waters.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">8:00 AM</div>
+                            <div class="itinerary-content"><h4>Breakfast at the Hotel</h4><p>Enjoy a hearty breakfast featuring local specialties like fresh apricots, walnuts, and traditional bread with honey from the Hunza Valley.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">9:30 AM</div>
+                            <div class="itinerary-content"><h4>Boat Tour on Attabad Lake</h4><p>Experience the stunning beauty of Attabad Lake up close with a guided boat tour. Marvel at the towering mountains reflected in the crystal-clear turquoise waters.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">11:30 AM</div>
+                            <div class="itinerary-content"><h4>Drive to Karimabad</h4><p>Enjoy a scenic drive along the Karakoram Highway to Karimabad, the cultural heart of Hunza Valley.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">12:30 PM</div>
+                            <div class="itinerary-content"><h4>Lunch at Café de Hunza</h4><p>Savor authentic Hunza cuisine at this charming café with panoramic views of Rakaposhi mountain. Try their specialty walnut cake and apricot tea.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">2:00 PM</div>
+                            <div class="itinerary-content"><h4>Visit Baltit Fort</h4><p>Explore this 700-year-old UNESCO World Heritage Site with a guided tour. Learn about the fascinating history of Hunza and enjoy spectacular views of the valley from the fort.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">4:00 PM</div>
+                            <div class="itinerary-content"><h4>Shopping in Karimabad Bazaar</h4><p>Browse the local market for authentic souvenirs, including hand-embroidered caps, walnut wood carvings, and local gemstone jewelry.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">5:30 PM</div>
+                            <div class="itinerary-content"><h4>Drive to Eagle's Nest Viewpoint</h4><p>Head to this famous viewpoint for the most spectacular panorama of Hunza Valley as the sun begins to set.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">6:30 PM</div>
+                            <div class="itinerary-content"><h4>Sunset Dinner at Eagle's Nest Restaurant</h4><p>Enjoy dinner with a view as the setting sun casts a golden glow over the entire Hunza Valley, illuminating the peaks of Rakaposhi, Ultar, and Diran.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">8:30 PM</div>
+                            <div class="itinerary-content"><h4>Return to The Consorts Hotels</h4><p>Drive back to the hotel under the starry Hunza sky. If you're lucky, you might catch a glimpse of the Milky Way on a clear night.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Off-the-Beaten-Path Tab -->
+                <div class="tab-content" id="off-beaten">
+                    <div class="tab-header">
+                        <h3>Off-the-Beaten-Path Explorer</h3>
+                        <p>Discover hidden gems and authentic experiences away from the tourist crowds</p>
+                    </div>
+                    <div class="itinerary">
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">6:00 AM</div>
+                            <div class="itinerary-content"><h4>Early Morning Hike to Borith Lake</h4><p>Start your day with a refreshing hike to this hidden high-altitude lake. Watch for local birdlife and enjoy the tranquility before other tourists arrive.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">8:30 AM</div>
+                            <div class="itinerary-content"><h4>Breakfast with a Local Family</h4><p>Experience authentic Hunza hospitality with a traditional breakfast in a local home in Gulmit village. Learn about daily life and traditions directly from residents.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">10:00 AM</div>
+                            <div class="itinerary-content"><h4>Visit Ondra Fort</h4><p>Explore this lesser-known fortress that offers a more authentic historical experience without the crowds of Baltit Fort.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">12:00 PM</div>
+                            <div class="itinerary-content"><h4>Lunch at Glacier Breeze Café</h4><p>Enjoy homemade Wakhi cuisine at this family-run café in Gulmit. Try their specialty apricot cake and sea buckthorn juice.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">1:30 PM</div>
+                            <div class="itinerary-content"><h4>Visit Passu Carpet Workshop</h4><p>Watch local artisans create beautiful hand-knotted carpets using ancient techniques passed down through generations.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">3:00 PM</div>
+                            <div class="itinerary-content"><h4>Hidden Viewpoint of Passu Cones</h4><p>Visit a secret local viewpoint that offers a unique perspective of the famous Passu Cones away from the tourist spots.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">5:00 PM</div>
+                            <div class="itinerary-content"><h4>Visit to Hussaini Hanging Bridge</h4><p>Cross this famous suspension bridge when most tourists have left for the day. Experience the thrill of walking across while enjoying views of the Hunza River below.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">7:00 PM</div>
+                            <div class="itinerary-content"><h4>Traditional Music Evening</h4><p>Join a local family in Karimabad for an authentic cultural experience featuring traditional music, instruments, and stories about Hunza heritage.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">9:30 PM</div>
+                            <div class="itinerary-content"><h4>Return to The Consorts Hotels</h4><p>Drive back to the hotel with memories of authentic Hunza experiences that most visitors never discover.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family-Friendly Tab -->
+                <div class="tab-content" id="family">
+                    <div class="tab-header">
+                        <h3>Family-Friendly Adventure</h3>
+                        <p>Fun and educational activities perfect for families with children</p>
+                    </div>
+                    <div class="itinerary">
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">8:00 AM</div>
+                            <div class="itinerary-content"><h4>Breakfast at the Hotel</h4><p>Start your day with a hearty family breakfast. Children will love the fresh fruit and honey from the Hunza Valley.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">9:30 AM</div>
+                            <div class="itinerary-content"><h4>Gentle Boat Ride on Attabad Lake</h4><p>Enjoy a family-friendly boat tour of the lake with life jackets provided for all ages. Look for fish in the crystal-clear waters and take family photos against the stunning backdrop.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">11:00 AM</div>
+                            <div class="itinerary-content"><h4>Visit Fruit Orchard</h4><p>Visit a local fruit orchard where children can learn about how apricots, apples, and cherries grow. Depending on the season, they may even be able to pick their own fruit.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">12:30 PM</div>
+                            <div class="itinerary-content"><h4>Picnic Lunch</h4><p>Enjoy a family picnic with pre-packed lunches from the hotel in a scenic spot with space for children to play safely.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">2:00 PM</div>
+                            <div class="itinerary-content"><h4>Baltit Fort Treasure Hunt</h4><p>Explore Baltit Fort with a special child-friendly guide who turns the historical tour into an educational treasure hunt with fun facts and activities.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">4:00 PM</div>
+                            <div class="itinerary-content"><h4>Traditional Craft Workshop</h4><p>Join a family-friendly workshop where children can learn to make simple traditional crafts like small carpets or decorated caps to take home as souvenirs.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">5:30 PM</div>
+                            <div class="itinerary-content"><h4>Wildlife Spotting at Borith Lake</h4><p>Visit this serene lake where children can use binoculars to spot local birds and maybe even glimpse some small wildlife. The flat walking path around the lake is suitable for all ages.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">7:00 PM</div>
+                            <div class="itinerary-content"><h4>Family Dinner at Hunza Food Pavilion</h4><p>Enjoy a family-friendly dinner with options that appeal to younger palates while still offering authentic local flavors for adults.</p></div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-time">8:30 PM</div>
+                            <div class="itinerary-content"><h4>Return to The Consorts Hotels</h4><p>Head back to the hotel for an early night after a day of family adventures. The hotel can arrange for hot chocolate and storytelling for children before bedtime.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Recommendations -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Year-Round Guide</p>
+                <h2>Seasonal Recommendations</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">The best activities and experiences for each season in Hunza Valley</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="season-card">
+                        <div class="season-header" style="background-color: #8BC34A; color:#0a0a0f;"><h3><i class="fas fa-seedling"></i> Spring (April - May)</h3></div>
+                        <div class="season-content">
+                            <p>Spring transforms Hunza Valley into a paradise of blossoms as the famous apricot, apple, and cherry trees burst into bloom, creating a spectacular display against the backdrop of snow-capped mountains.</p>
+                            <h4>Highlights:</h4>
+                            <ul>
+                                <li>Hunza Blossom Festival (late April)</li>
+                                <li>Moderate temperatures perfect for hiking</li>
+                                <li>Lush green landscapes with colorful wildflowers</li>
+                                <li>Less crowded than summer months</li>
+                            </ul>
+                            <h4>Recommended Activities:</h4>
+                            <ul>
+                                <li>Photography tours of blooming orchards</li>
+                                <li>Moderate hiking trails as they become accessible</li>
+                                <li>Cultural festivals celebrating the new growing season</li>
+                                <li>Bird watching as migratory species return</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="season-card">
+                        <div class="season-header" style="background-color: #FFEB3B; color:#0a0a0f;"><h3><i class="fas fa-sun"></i> Summer (June - August)</h3></div>
+                        <div class="season-content">
+                            <p>Summer brings perfect weather conditions for exploring the highest peaks and passes of the region. This is the peak tourist season when all attractions and hiking trails are fully accessible.</p>
+                            <h4>Highlights:</h4>
+                            <ul>
+                                <li>Ideal weather for high-altitude exploration</li>
+                                <li>Vibrant local festivals and polo matches</li>
+                                <li>Fresh fruit harvest (cherries, mulberries, apricots)</li>
+                                <li>Longest daylight hours for maximum exploration</li>
+                            </ul>
+                            <h4>Recommended Activities:</h4>
+                            <ul>
+                                <li>Trekking to high-altitude lakes and glaciers</li>
+                                <li>Water activities on Attabad Lake</li>
+                                <li>Camping under the stars</li>
+                                <li>Jeep safaris to remote valleys</li>
+                                <li>Traditional polo matches in Shandur (July)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="season-card">
+                        <div class="season-header" style="background-color: #FF9800; color:#0a0a0f;"><h3><i class="fas fa-leaf"></i> Autumn (September - October)</h3></div>
+                        <div class="season-content">
+                            <p>Autumn paints Hunza Valley in spectacular shades of gold, amber, and crimson as the foliage changes color. The clear air offers the most dramatic mountain views of the year.</p>
+                            <h4>Highlights:</h4>
+                            <ul>
+                                <li>Breathtaking fall foliage</li>
+                                <li>Harvest season for apples, grapes, and walnuts</li>
+                                <li>Crystal clear views of mountain peaks</li>
+                                <li>Pleasant temperatures and fewer tourists</li>
+                            </ul>
+                            <h4>Recommended Activities:</h4>
+                            <ul>
+                                <li>Photography tours of autumn landscapes</li>
+                                <li>Harvest festivals and traditional food preparation</li>
+                                <li>Moderate to challenging hikes with spectacular views</li>
+                                <li>Fruit picking experiences at local orchards</li>
+                                <li>Cultural experiences as communities prepare for winter</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="season-card">
+                        <div class="season-header" style="background-color: #90CAF9; color:#0a0a0f;"><h3><i class="fas fa-snowflake"></i> Winter (November - March)</h3></div>
+                        <div class="season-content">
+                            <p>Winter transforms Hunza Valley into a serene wonderland of snow-covered peaks and quiet villages. While some high-altitude areas become inaccessible, this season offers a unique, authentic experience of local life.</p>
+                            <h4>Highlights:</h4>
+                            <ul>
+                                <li>Snow-covered landscapes and dramatic scenery</li>
+                                <li>Traditional winter festivals and celebrations</li>
+                                <li>Authentic cultural experiences with few tourists</li>
+                                <li>Cozy evenings by the fire with traditional music</li>
+                            </ul>
+                            <h4>Recommended Activities:</h4>
+                            <ul>
+                                <li>Winter photography of snow-capped mountains</li>
+                                <li>Cultural immersion in local winter traditions</li>
+                                <li>Snowshoeing and winter hiking on accessible trails</li>
+                                <li>Traditional cooking classes featuring winter specialties</li>
+                                <li>Stargazing in the crystal-clear winter night sky</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>Ready to Explore Hunza Valley?</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Let us help you plan your perfect adventure from The Consorts Hotels.</p>
+                <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" class="btn btn-primary btn-lg">Book Your Stay</a>
+                    <a href="../contact/index.html" class="btn btn-secondary btn-lg">Contact Our Concierge</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with special offers, local events, and travel tips for Hunza Valley.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="mt-2" style="font-size:0.85rem; color:var(--text-muted);">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- partials/footer.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="height:75px; margin-bottom:1.2rem;">
+                <p>Experience eco-luxury at Attabad Lake with our unique container accommodations offering breathtaking views of Hunza Valley.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/theconsortshotel" target="_new" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/theconsortshotel" target="_new" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@the.consorts.hotel" target="_new" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@TheConsortsHotelsResorts" target="_new" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                    <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                    <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                    <li><a href="../../pages/about/index.html">About Us</a></li>
+                    <li><a href="../../pages/blog/index.html">Blog</a></li>
+                    <li><a href="../../pages/contact/index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Karakoram Highway, Attabad Lake, Hunza, Gilgit-Baltistan, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> Official: +92 332 6676787</li>
+                    <li><i class="fas fa-phone"></i> Front Desk: +92 355 5262622</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@theconsorts.com">info@theconsorts.com</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:reservations@theconsorts.com">reservations@theconsorts.com</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Policies</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="https://theconsorts.com/pages/terms-and-condition/index.html">Terms & Conditions</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Consorts Hotels & Resorts. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMobile.classList.toggle('open');
+            overlayBackdrop.classList.toggle('visible');
+            document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+        });
+        overlayBackdrop.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMobile.classList.remove('open');
+            overlayBackdrop.classList.remove('visible');
+            document.body.style.overflow = '';
+        });
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtnsGuide = document.querySelectorAll('.section-guide .tab-btn');
+            const tabContentsGuide = document.querySelectorAll('.section-guide .tab-content');
+            const tabBtnsItenereary = document.querySelectorAll('.section-itenerary .tab-btn');
+            const tabContentsItenereary = document.querySelectorAll('.section-itenerary .tab-content');
+
+            tabBtnsGuide.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtnsGuide.forEach(b => b.classList.remove('active'));
+                    tabContentsGuide.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            tabBtnsItenereary.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtnsItenereary.forEach(b => b.classList.remove('active'));
+                    tabContentsItenereary.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3X7J449DL"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H3X7J449DL');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223007346"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18223007346');</script>
+    <script>
+(function() {
+    function initHeader() {
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+        }
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+        if (hamburger && navMobile && overlayBackdrop) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMobile.classList.toggle('open');
+                overlayBackdrop.classList.toggle('visible');
+                document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+            });
+            overlayBackdrop.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+            document.querySelectorAll('.nav-mobile a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMobile.classList.remove('open');
+                    overlayBackdrop.classList.remove('visible');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+        let currentPath = window.location.pathname;
+        if (currentPath === '' || currentPath === '/') currentPath = '/index.html';
+        document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(link => {
+            let linkPath;
+            try { linkPath = new URL(link.getAttribute('href'), window.location.href).pathname; } catch (e) { return; }
+            if (linkPath === currentPath) link.classList.add('active');
+        });
+    }
+    initHeader();
+})();
+</script>
+</body>
+</html>

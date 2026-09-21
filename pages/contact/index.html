@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Contact Us | The Consorts Hotels</title>
+    <meta name="description" content="Get in touch with The Consorts Hotels. Find our location, contact information, and directions to our unique container accommodations at Attabad Lake.">
+
+    <link rel="shortcut icon" href="/images/logo/consort_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #151520;
+            --bg-card-hover: #1a1a28;
+            --bg-glass: rgba(18, 18, 28, 0.85);
+            --bg-glass-light: rgba(20, 20, 30, 0.7);
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #a8883e;
+            --gold-glow: rgba(201, 169, 98, 0.15);
+            --gold-glow-strong: rgba(201, 169, 98, 0.3);
+            --text-primary: #f0ede8;
+            --text-secondary: #b0ada8;
+            --text-muted: #7a7875;
+            --text-gold: #d4b87a;
+            --border-dark: #2a2a35;
+            --border-light: #3a3a48;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.15);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+            --font-accent: 'Montserrat', sans-serif;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --container: 1280px;
+        }
+
+        *,
+        *::before,
+        *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: 0.01em;
+        }
+
+        ::selection { background: var(--gold); color: var(--bg-primary); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color var(--transition-fast); }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; background: none; font-family: var(--font-body); font-size: inherit; color: inherit; }
+        input, select, textarea { font-family: var(--font-body); font-size: 0.95rem; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-sm); padding: 0.75rem 1rem; outline: none; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); width: 100%; }
+        input:focus, select:focus, textarea:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px var(--gold-glow); }
+        input::placeholder, textarea::placeholder { color: var(--text-muted); }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; } .mb-2 { margin-bottom: 1rem; } .mb-3 { margin-bottom: 1.5rem; } .mb-4 { margin-bottom: 2rem; } .mb-5 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mt-3 { margin-top: 1.5rem; } .mt-4 { margin-top: 2rem; }
+        .w-100 { width: 100%; }
+
+        .subtitle {
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--text-primary); letter-spacing: 0.01em; }
+        h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; line-height: 1.15; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+        h3 { font-size: 1.3rem; font-weight: 600; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.8rem 1.8rem; font-family: var(--font-accent); font-size: 0.85rem; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase; border-radius: var(--radius-full);
+            transition: all var(--transition-base); position: relative; overflow: hidden; white-space: nowrap;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: #0a0a0f; box-shadow: 0 4px 20px var(--gold-glow-strong); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--gold-glow-strong); background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #0a0a0f; }
+        .btn-secondary { background: transparent; color: var(--text-gold); border: 1px solid var(--gold-dark); }
+        .btn-secondary:hover { background: var(--gold-glow); border-color: var(--gold); transform: translateY(-2px); color: var(--gold-light); }
+        .btn-lg { padding: 1rem 2.4rem; font-size: 0.9rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.8rem 0; transition: all var(--transition-base); background: transparent; }
+        .header.scrolled { background: var(--bg-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); padding: 0.5rem 0; box-shadow: var(--shadow-sm); }
+        .header-container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .logo img { height: 44px; width: auto; transition: height var(--transition-base); filter: brightness(1.1); }
+        .header.scrolled .logo img { height: 38px; }
+        .nav-desktop ul { display: flex; align-items: center; gap: 0.3rem; }
+        .nav-desktop ul li a { padding: 0.5rem 1rem; font-family: var(--font-accent); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-full); transition: all var(--transition-fast); position: relative; }
+        .nav-desktop ul li a:hover, .nav-desktop ul li a.active { color: var(--text-gold); background: var(--gold-glow); }
+        .book-1 { padding: 0.65rem 1.5rem; font-size: 0.78rem; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; z-index: 1001; }
+        .hamburger span { display: block; width: 28px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all var(--transition-base); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .hamburger.active span:nth-child(4) { transform: rotate(45deg) translate(-2px, -12px); }
+
+        .nav-mobile { position: fixed; top: 0; right: -100%; width: min(360px, 85vw); height: 100vh; background: var(--bg-secondary); border-left: 1px solid var(--border-dark); padding: 5rem 2rem 2rem; transition: right var(--transition-slow); z-index: 999; overflow-y: auto; box-shadow: var(--shadow-lg); }
+        .nav-mobile.open { right: 0; }
+        .nav-mobile ul { display: flex; flex-direction: column; gap: 0.3rem; }
+        .nav-mobile ul li a { display: block; padding: 0.9rem 1rem; font-family: var(--font-accent); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+        .nav-mobile ul li a:hover { color: var(--text-gold); background: var(--gold-glow); }
+        .nav-mobile .btn { margin-top: 1rem; width: 100%; }
+        .overlay-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 998; opacity: 0; visibility: hidden; transition: all var(--transition-base); }
+        .overlay-backdrop.visible { opacity: 1; visibility: visible; }
+
+        /* Hero */
+        .hero { position: relative; height: 50vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-size: cover; background-position: center; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,15,0.7) 0%, rgba(10,10,15,0.4) 50%, rgba(10,10,15,0.8) 100%); }
+        .hero .container { position: relative; z-index: 2; }
+        .hero h1 { color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.5); margin-bottom: 0.5rem; }
+        .hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; font-weight: 300; }
+
+        /* Sections */
+        .section { padding: 5rem 0; position: relative; }
+        .bg-light { background: var(--bg-secondary); }
+        .bg-white { background: var(--bg-primary); } /* override */
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+
+        /* Contact info */
+        .contact-info h2 { margin-bottom: 1rem; }
+        .contact-info p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; }
+        .contact-methods { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+        .contact-method { display: flex; gap: 1rem; align-items: flex-start; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-md); padding: 1.2rem; transition: all var(--transition-base); }
+        .contact-method:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); }
+        .contact-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--gold-glow); border: 1px solid var(--gold-dark); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.2rem; flex-shrink: 0; }
+        .contact-details h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+        .contact-details p, .contact-details a { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; }
+        .contact-details a:hover { color: var(--text-gold); }
+
+        .social-links { margin-top: 1rem; }
+        .social-links h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .social-icons { display: flex; gap: 0.7rem; }
+        .social-icons a { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.95rem; transition: all var(--transition-fast); }
+        .social-icons a:hover { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); transform: translateY(-3px); }
+
+        /* Contact form */
+        .contact-form-container { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); }
+        .contact-form-container h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+        .contact-form-container p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--text-secondary); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; }
+        .form-group textarea { resize: vertical; }
+        .checkbox-container { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); cursor: pointer; }
+        .checkbox-container input { width: auto; margin-top: 0.2rem; accent-color: var(--gold); }
+        .checkbox-container a { color: var(--text-gold); text-decoration: underline; }
+
+        /* Map & Directions */
+        .map-container { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-dark); margin-bottom: 2rem; }
+        .map-container iframe { display: block; width: 100%; height: 450px; filter: grayscale(0.3) contrast(1.1) brightness(0.9); }
+        .map-overlay { position: absolute; bottom: 1.5rem; left: 1.5rem; z-index: 2; }
+        .location-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .directions-content h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .directions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .direction-box { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-md); padding: 1.5rem; transition: all var(--transition-base); }
+        .direction-box:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-gold); transform: translateY(-3px); }
+        .direction-box h4 { font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--gold-light); }
+        .direction-box p, .direction-box li { font-size: 0.9rem; color: var(--text-secondary); }
+        .direction-box ol { padding-left: 1.2rem; margin-top: 0.5rem; }
+        .direction-box li { margin-bottom: 0.3rem; }
+
+        /* FAQ */
+        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden; transition: all var(--transition-base); }
+        .faq-item:hover { border-color: var(--gold-dark); }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.5rem; cursor: pointer; gap: 1rem; }
+        .faq-question h3 { font-size: 1rem; font-weight: 500; }
+        .faq-toggle { color: var(--gold); font-size: 0.9rem; transition: transform var(--transition-fast); }
+        .faq-answer { display: none; padding: 0 1.5rem 1.2rem; border-top: 1px solid var(--border-dark); }
+        .faq-answer p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+        /* Newsletter */
+        .newsletter { padding: 4rem 0; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+        .newsletter h2 { margin-bottom: 0.5rem; }
+        .newsletter p { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; }
+        .newsletter-form { display: flex; gap: 0.6rem; max-width: 500px; margin: 0 auto; }
+        .newsletter-form input { flex: 1; background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: var(--radius-full); padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+        .newsletter-form input:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px var(--gold-glow); }
+        .newsletter-form button { padding: 0.85rem 2rem; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--bg-primary); border-radius: var(--radius-full); font-family: var(--font-accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: all var(--transition-base); white-space: nowrap; }
+        .newsletter-form button:hover { background: linear-gradient(135deg, var(--gold-light), var(--gold)); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+
+        /* Footer */
+        .footer { background: var(--bg-secondary); padding: 4rem 0 0; border-top: 1px solid var(--border-dark); }
+        .footer .row { grid-template-columns: 2fr 1fr 1.5fr 1fr; align-items: start; gap: 2.5rem; padding-bottom: 3rem; }
+        .footer h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-gold); margin-bottom: 1.2rem; }
+        .footer p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; }
+        .footer-social { display: flex; gap: 0.7rem; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.95rem; transition: all var(--transition-fast); }
+        .footer-social a:hover { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); transform: translateY(-3px); }
+        .footer-links li { margin-bottom: 0.7rem; font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 0.6rem; }
+        .footer-links li i { color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem; width: 16px; text-align: center; flex-shrink: 0; }
+        .footer-links a { color: var(--text-secondary); transition: color var(--transition-fast); }
+        .footer-links a:hover { color: var(--text-gold); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--border-dark); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .footer .row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 992px) {
+            .nav-desktop { display: none; }
+            .hamburger { display: flex; }
+            .book-1 { display: none; }
+            .row { grid-template-columns: 1fr; }
+            .directions-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 3.5rem 0; }
+            .footer .row { grid-template-columns: 1fr; gap: 2rem; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form button { width: 100%; }
+            .map-container iframe { height: 300px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .header-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <!-- partials/header.html -->
+<header class="header" id="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="filter: brightness(1.1);">
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                <li><a href="../../pages/about/index.html">About Us</a></li>
+                <li><a href="../../pages/blog/index.html">Blog</a></li>
+                <li><a href="../../pages/contact/index.html">Contact</a></li>
+                <li><a href="../../pages/terms-and-condition/index.html">Terms</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary book-1">Book Now</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+            <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+            <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+            <li><a href="../../pages/about/index.html">About Us</a></li>
+            <li><a href="../../pages/blog/index.html">Blog</a></li>
+            <li><a href="../../pages/contact/index.html">Contact</a></li>
+            <li><a href="../../pages/terms-and-condition/index.html">Terms & Condition</a></li>
+            <li><a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+    <!-- Page Banner -->
+    <section class="hero" style="background-image: url('https://theconsorts.com/images/hero/000-3.jpg?cache=no'); height: 50vh;">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Contact Us</h1>
+                <p>Speak to our team and book your visit to The Consorts Hotels with ease.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="contact-info">
+                        <p class="subtitle">Get In Touch</p>
+                        <h2>Contact Information</h2>
+                        <p>We're here to answer any questions you may have about The Consorts Hotels. Reach out to us using any of the methods below, and our team will respond as soon as possible.</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-details">
+                                    <h3>Address</h3>
+                                    <p>The Consorts Hotels<br>Main KKH<br>Near Attabad Boating Stand<br>Shishkat, Hunza Gilgit Baltistan,<br>Pakistan</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div class="contact-details">
+                                    <h3>Phone</h3>
+                                    <p>Reservations: <a href="tel:+923326676787">+92 332 6676787</a></p>
+                                    <p>Front Desk: <a href="tel:+92 355 5262622">+92 355 5262622</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <a href="mailto:info@theconsorts.com">info@theconsorts.com</a><br>
+                                    <a href="mailto:reservations@theconsorts.com">reservations@theconsorts.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                                <div class="contact-details">
+                                    <h3>Hours</h3>
+                                    <p>Reception: 24/7<br>Reservations: 9:00 AM - 8:00 PM (PKT)<br>Restaurant: 7:00 AM - 10:00 PM (PKT)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links mt-4">
+                            <h3>Connect With Us</h3>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/theconsortshotel" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/theconsortshotel" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@the.consorts.hotel" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.youtube.com/@TheConsortsHotelsResorts" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="contact-form-container">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill out the form below, and we'll get back to you as soon as possible.</p>
+
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name*</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject*</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" selected disabled>Please select</option>
+                                    <option value="reservation">Reservation Inquiry</option>
+                                    <option value="information">General Information</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="media">Media Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message*</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="newsletter" id="newsletter">
+                                    <span>Subscribe to our newsletter for special offers and updates</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="privacy" id="privacy" required>
+                                    <span>I agree to the <a href="#">privacy policy</a> and consent to the processing of my personal data</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Directions -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="subtitle">Find Us</p>
+                <h2>Location & Directions</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">The Consorts Hotels is located on the shores of Attabad Lake along the Karakoram Highway in Hunza Valley, Gilgit-Baltistan, Pakistan.</p>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.2890558347335!2d74.87220387569812!3d36.32954369408916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e8a97f2c14d5cb%3A0xf02fc9c8567d3aac!2sThe%20Consorts%20Hotels%20%26%20Resorts!5e0!3m2!1sen!2s!4v1744381818651!5m2!1sen!2s" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-overlay">
+                    <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary">Open in Google Maps</a>
+                </div>
+            </div>
+
+            <div class="location-grid">
+                <div class="directions-content">
+                    <h3>How to Reach Us</h3>
+                    <div class="directions-grid">
+                        <div class="direction-box">
+                            <h4><i class="fas fa-plane"></i> By Air</h4>
+                            <p>The nearest airport is Gilgit Airport (GIL), approximately 120 km from the hotel. From Gilgit, you can arrange private transportation or take a local bus to Attabad Lake.</p>
+                            <p>Alternatively, fly to Islamabad International Airport (ISB) and then travel by road to Hunza Valley.</p>
+                        </div>
+                        <div class="direction-box">
+                            <h4><i class="fas fa-car"></i> By Road from Islamabad</h4>
+                            <p>The journey from Islamabad to The Consorts Hotels takes approx. 12–14 hours (600 km) via the Karakoram Highway (KKH).</p>
+                            <ol>
+                                <li>Take the Karakoram Highway (N-35) from Islamabad</li>
+                                <li>Pass through Abbottabad, Mansehra, and Besham</li>
+                                <li>Continue through Gilgit and Aliabad</li>
+                                <li>Proceed to Attabad Lake (~20 km past Aliabad)</li>
+                                <li>We’re on the eastern shore of the lake</li>
+                            </ol>
+                        </div>
+                        <div class="direction-box">
+                            <h4><i class="fas fa-bus"></i> By Public Transport</h4>
+                            <p>NATCO and other bus services run daily from Islamabad to Gilgit. From Gilgit, take a local van or bus to Attabad Lake. We recommend a pickup from Gilgit or Aliabad for convenience.</p>
+                        </div>
+                        <div class="direction-box">
+                            <h4><i class="fas fa-concierge-bell"></i> Hotel Transfer Service</h4>
+                            <p>We offer private transfer services from Gilgit Airport and Islamabad. Contact our reservations team 48 hours in advance to arrange.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="subtitle">Common Questions</p>
+                <h2>Frequently Asked Questions</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Find answers to commonly asked questions about The Consorts Hotels.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Where are you located?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer"><p>Main KKH, Near Attabad Boating Stand, Shishkat, Hunza, Gilgit Baltistan, Pakistan.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your reservation process?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer"><p>You can make a reservation through booking platforms such as Booking.com, TripAdvisor, and Agoda. Alternatively, you can book directly through our website or contact us by phone.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is check-in and check-out time?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer"><p>Our check-in time is at 1:00 pm, and check-out is at 12:00 pm.</p></div>
+                    </div>
+                </div>
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you have credit card facilities available?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer"><p>Yes, we offer credit card facilities to ensure a seamless experience during your stay.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does it take from Gilgit to your hotel?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer"><p>The journey from Gilgit to The Consorts Hotels & Resorts takes approximately 2–3 hours by car.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Should we land in Skardu or Gilgit?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer"><p>It’s best to land in Gilgit, which is closer to Hunza. The drive from Gilgit takes 2–3 hours. If you land in Skardu, the journey would take 5–6 hours by road. We also provide transportation with pre-booking.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>Ready to Experience The Consorts Hotels?</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Book your stay now and create your own memories in this breathtaking location.</p>
+                <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" class="btn btn-primary btn-lg">Book Your Stay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with special offers, local events, and travel tips for Hunza Valley.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="mt-2" style="font-size:0.85rem; color:var(--text-muted);">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- partials/footer.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="height:75px; margin-bottom:1.2rem;">
+                <p>Experience eco-luxury at Attabad Lake with our unique container accommodations offering breathtaking views of Hunza Valley.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/theconsortshotel" target="_new" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/theconsortshotel" target="_new" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@the.consorts.hotel" target="_new" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@TheConsortsHotelsResorts" target="_new" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../pages/rooms/index.html">Rooms & Suites</a></li>
+                    <li><a href="../../pages/gallery/index.html">Gallery</a></li>
+                    <li><a href="../../pages/local-explorer/index.html">Local Explorer</a></li>
+                    <li><a href="../../pages/about/index.html">About Us</a></li>
+                    <li><a href="../../pages/blog/index.html">Blog</a></li>
+                    <li><a href="../../pages/contact/index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Karakoram Highway, Attabad Lake, Hunza, Gilgit-Baltistan, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> Official: +92 332 6676787</li>
+                    <li><i class="fas fa-phone"></i> Front Desk: +92 355 5262622</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@theconsorts.com">info@theconsorts.com</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:reservations@theconsorts.com">reservations@theconsorts.com</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Policies</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="https://theconsorts.com/pages/terms-and-condition/index.html">Terms & Conditions</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Consorts Hotels & Resorts. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMobile.classList.toggle('open');
+            overlayBackdrop.classList.toggle('visible');
+            document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+        });
+        overlayBackdrop.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMobile.classList.remove('open');
+            overlayBackdrop.classList.remove('visible');
+            document.body.style.overflow = '';
+        });
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+                question.addEventListener('click', function() {
+                    const isOpen = answer.style.display === 'block';
+                    // Close all
+                    faqItems.forEach(other => {
+                        other.querySelector('.faq-answer').style.display = 'none';
+                        other.querySelector('.faq-toggle i').className = 'fas fa-plus';
+                    });
+                    if (!isOpen) {
+                        answer.style.display = 'block';
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3X7J449DL"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H3X7J449DL');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223007346"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18223007346');</script>
+    <script>
+(function() {
+    function initHeader() {
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+        }
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+        if (hamburger && navMobile && overlayBackdrop) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMobile.classList.toggle('open');
+                overlayBackdrop.classList.toggle('visible');
+                document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+            });
+            overlayBackdrop.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+            document.querySelectorAll('.nav-mobile a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMobile.classList.remove('open');
+                    overlayBackdrop.classList.remove('visible');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+        let currentPath = window.location.pathname;
+        if (currentPath === '' || currentPath === '/') currentPath = '/index.html';
+        document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(link => {
+            let linkPath;
+            try { linkPath = new URL(link.getAttribute('href'), window.location.href).pathname; } catch (e) { return; }
+            if (linkPath === currentPath) link.classList.add('active');
+        });
+    }
+    initHeader();
+})();
+</script>
+</body>
+</html>

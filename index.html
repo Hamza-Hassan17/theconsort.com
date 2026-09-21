@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>The Consorts Hotels | Luxury Container Accommodations at Attabad Lake</title>
+    <meta name="description" content="Experience eco-luxury at The Consorts Hotels with unique container accommodations offering breathtaking views of Attabad Lake and Hunza Valley.">
+
+    <link rel="shortcut icon" href="https://placehold.co/32x32/c9a962/0a0a0f?text=TC" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #151520;
+            --bg-card-hover: #1a1a28;
+            --bg-glass: rgba(18, 18, 28, 0.85);
+            --bg-glass-light: rgba(20, 20, 30, 0.7);
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #a8883e;
+            --gold-glow: rgba(201, 169, 98, 0.15);
+            --gold-glow-strong: rgba(201, 169, 98, 0.3);
+            --text-primary: #f0ede8;
+            --text-secondary: #b0ada8;
+            --text-muted: #7a7875;
+            --text-gold: #d4b87a;
+            --border-dark: #2a2a35;
+            --border-light: #3a3a48;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-gold: 0 8px 32px rgba(201, 169, 98, 0.15);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+            --font-accent: 'Montserrat', sans-serif;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            --container: 1280px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: 0.01em;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-dark);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: var(--font-body);
+            font-size: inherit;
+            color: inherit;
+        }
+        input,
+        select,
+        textarea {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 1rem;
+            outline: none;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            width: 100%;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--gold-dark);
+            box-shadow: 0 0 0 3px var(--gold-glow);
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mb-1 {
+            margin-bottom: 0.5rem;
+        }
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
+        .mb-3 {
+            margin-bottom: 1.5rem;
+        }
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+        .mt-1 {
+            margin-top: 0.5rem;
+        }
+        .mt-2 {
+            margin-top: 1rem;
+        }
+        .mt-3 {
+            margin-top: 1.5rem;
+        }
+        .mt-4 {
+            margin-top: 2rem;
+        }
+        .w-100 {
+            width: 100%;
+        }
+
+        .subtitle {
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.25;
+            color: var(--text-primary);
+            letter-spacing: 0.01em;
+        }
+        h1 {
+            font-size: clamp(2.2rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.15;
+        }
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.8rem;
+            font-family: var(--font-accent);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-radius: var(--radius-full);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #0a0a0f;
+            box-shadow: 0 4px 20px var(--gold-glow-strong);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px var(--gold-glow-strong);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            color: #0a0a0f;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-gold);
+            border: 1px solid var(--gold-dark);
+        }
+        .btn-secondary:hover {
+            background: var(--gold-glow);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            color: var(--gold-light);
+        }
+        .btn-lg {
+            padding: 1rem 2.4rem;
+            font-size: 0.9rem;
+        }
+
+        /* ─── HEADER ─── */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0.8rem 0;
+            transition: all var(--transition-base);
+            background: transparent;
+        }
+        .header.scrolled {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-dark);
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+        .header-container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .logo img {
+            height: 44px;
+            width: auto;
+            transition: height var(--transition-base);
+        }
+        .header.scrolled .logo img {
+            height: 38px;
+        }
+        .nav-desktop ul {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .nav-desktop ul li a {
+            padding: 0.5rem 1rem;
+            font-family: var(--font-accent);
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            border-radius: var(--radius-full);
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+        .nav-desktop ul li a:hover,
+        .nav-desktop ul li a.active {
+            color: var(--text-gold);
+            background: var(--gold-glow);
+        }
+        .book-1 {
+            padding: 0.65rem 1.5rem;
+            font-size: 0.78rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: all var(--transition-base);
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        .hamburger.active span:nth-child(4) {
+            transform: rotate(45deg) translate(-2px, -12px);
+        }
+
+        .nav-mobile {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: min(360px, 85vw);
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border-dark);
+            padding: 5rem 2rem 2rem;
+            transition: right var(--transition-slow);
+            z-index: 999;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+        }
+        .nav-mobile.open {
+            right: 0;
+        }
+        .nav-mobile ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .nav-mobile ul li a {
+            display: block;
+            padding: 0.9rem 1rem;
+            font-family: var(--font-accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+        }
+        .nav-mobile ul li a:hover {
+            color: var(--text-gold);
+            background: var(--gold-glow);
+        }
+        .nav-mobile .btn {
+            margin-top: 1rem;
+            width: 100%;
+        }
+        .overlay-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+        }
+        .overlay-backdrop.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ─── HERO SLIDER ─── */
+        .hero-slider {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            background: var(--bg-primary);
+        }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .slider {
+            position: absolute;
+            inset: 0;
+        }
+        .slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+        }
+        .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+        .slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10, 10, 15, 0.6) 0%, rgba(10, 10, 15, 0.3) 40%, rgba(10, 10, 15, 0.75) 100%);
+            z-index: 1;
+        }
+        .slider-nav {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 10;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .slider-nav button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            transition: all var(--transition-fast);
+        }
+        .slider-nav button:hover {
+            background: var(--gold);
+            color: var(--bg-primary);
+            border-color: var(--gold);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+            padding: 0 1.5rem;
+        }
+        .hero-content h1 {
+            color: #fff !important;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin-bottom: 1rem;
+        }
+        .hero-content p {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hero-buttons .btn {
+            backdrop-filter: blur(10px);
+        }
+        .hero-buttons .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+        .hero-buttons .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.5rem;
+            animation: bounceDown 2s infinite;
+        }
+        @keyframes bounceDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        /* ─── BOOKING WIDGET ─── */
+        .booking-widget-section {
+            margin-top: -3.5rem;
+            position: relative;
+            z-index: 20;
+            padding: 0 1.5rem;
+        }
+        .booking-widget-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) auto;
+            gap: 0.5rem;
+            background: var(--bg-glass);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            max-width: var(--container);
+            margin: 0 auto;
+        }
+        .booking-field label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-accent);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+        .booking-field label i {
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+        .booking-field input[type="date"],
+        .booking-field input[type="number"] {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-sm);
+            padding: 0.65rem 0.8rem;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+        .guest-counter {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-sm);
+            padding: 0.2rem;
+        }
+        .guest-counter input {
+            text-align: center;
+            padding: 0.5rem 0;
+            background: transparent;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .counter-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            border: 1px solid var(--border-dark);
+        }
+        .counter-btn:hover {
+            background: var(--gold-glow);
+            border-color: var(--gold-dark);
+            color: var(--gold);
+        }
+        .booking-field-btn {
+            display: flex;
+            align-items: flex-end;
+        }
+        .booking-field-btn .btn {
+            padding: 0.7rem 1.8rem;
+            font-size: 0.8rem;
+        }
+
+        /* ─── SECTIONS ─── */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        .section.bg-light {
+            background: var(--bg-secondary);
+        }
+
+        /* ─── USP GRID ─── */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        .usp-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-dark);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+        .usp-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .usp-item:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold-dark);
+            box-shadow: var(--shadow-gold);
+        }
+        .usp-item:hover::before {
+            opacity: 1;
+        }
+        .usp-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-glow);
+            border: 1px solid var(--gold-dark);
+            color: var(--gold);
+            font-size: 1.4rem;
+            transition: all var(--transition-base);
+        }
+        .usp-item:hover .usp-icon {
+            background: var(--gold);
+            color: var(--bg-primary);
+            border-color: var(--gold);
+            transform: scale(1.1);
+        }
+        .usp-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+        .usp-item p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ─── ROOM CARDS ─── */
+        .room-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-dark);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .room-card:hover {
+            border-color: var(--gold-dark);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-6px);
+        }
+        .room-card-image {
+            position: relative;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+        }
+        .room-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        .room-card:hover .room-card-image img {
+            transform: scale(1.05);
+        }
+        .room-card-price {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-full);
+            font-family: var(--font-accent);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--gold-light);
+            border: 1px solid var(--gold-dark);
+        }
+        .room-card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .room-card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+        .room-card-content > p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+        .room-card-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .room-card-features span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .room-card-features i {
+            color: var(--gold);
+            font-size: 0.75rem;
+        }
+        .room-card-price p {
+            font-size: 0.82rem;
+            color: var(--text-gold);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .room-card-buttons {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: auto;
+        }
+        .room-card-buttons .btn {
+            flex: 1;
+            padding: 0.65rem 1rem;
+            font-size: 0.72rem;
+        }
+
+        /* Owl carousel nav override */
+        .owl-theme .owl-nav [class*='owl-'] {
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-dark);
+            color: var(--text-primary) !important;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+        .owl-theme .owl-nav [class*='owl-']:hover {
+            background: var(--gold) !important;
+            color: var(--bg-primary) !important;
+            border-color: var(--gold);
+        }
+        .owl-theme .owl-nav {
+            margin-top: 1.5rem;
+        }
+
+        /* ─── EXPERIENCE ─── */
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .experience-content h2 {
+            margin-bottom: 1rem;
+        }
+        .experience-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .experience-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .experience-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            padding: 0.7rem 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-dark);
+            transition: all var(--transition-fast);
+        }
+        .experience-feature:hover {
+            border-color: var(--gold-dark);
+            color: var(--text-primary);
+        }
+        .experience-feature i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+        .experience-image {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--border-dark);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        .experience-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--gold-glow), transparent 60%);
+            pointer-events: none;
+        }
+        .experience-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 400px;
+        }
+
+        /* ─── EXPLORER CARDS ─── */
+        .explorer-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-dark);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .explorer-card:hover {
+            border-color: var(--gold-dark);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-6px);
+        }
+        .explorer-card-image {
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            position: relative;
+        }
+        .explorer-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        .explorer-card:hover .explorer-card-image img {
+            transform: scale(1.05);
+        }
+        .explorer-card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .explorer-card-content h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+        .explorer-card-content p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            flex: 1;
+        }
+        .explorer-card-content .btn {
+            align-self: flex-start;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.72rem;
+        }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials {
+            background: var(--bg-primary);
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-dark);
+            padding: 2rem;
+            transition: all var(--transition-base);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-card:hover {
+            border-color: var(--gold-dark);
+            box-shadow: var(--shadow-gold);
+        }
+        .testimonial-content {
+            flex: 1;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-content::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.25;
+            position: absolute;
+            top: -1.5rem;
+            left: -0.5rem;
+            line-height: 1;
+        }
+        .testimonial-content p {
+            font-style: italic;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .testimonial-author-image {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--gold-dark);
+            flex-shrink: 0;
+        }
+        .testimonial-author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .testimonial-author-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+        .testimonial-author-title {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* ─── WHY BOOK DIRECT ─── */
+        .thumbnail {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-dark);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all var(--transition-base);
+            height: 100%;
+        }
+        .thumbnail:hover {
+            border-color: var(--gold-dark);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-4px);
+        }
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 1.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-glow);
+            border: 1px solid var(--gold-dark);
+            color: var(--gold);
+            font-size: 1.2rem;
+            transition: all var(--transition-base);
+        }
+        .thumbnail:hover .feature-icon {
+            background: var(--gold);
+            color: var(--bg-primary);
+        }
+        .thumbnail h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+        }
+        .thumbnail p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ─── WEATHER ─── */
+        .weatherwidget-io {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-dark);
+            background: var(--bg-card);
+        }
+
+        /* ─── INSTAGRAM ─── */
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0.5rem;
+        }
+        .instagram-item {
+            position: relative;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            aspect-ratio: 1;
+            border: 1px solid var(--border-dark);
+            cursor: pointer;
+        }
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-base);
+        }
+        .instagram-item:hover img {
+            transform: scale(1.08);
+        }
+        .instagram-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+        .instagram-overlay a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.4rem;
+            backdrop-filter: blur(6px);
+            transition: all var(--transition-fast);
+        }
+        .instagram-overlay a:hover {
+            background: var(--gold);
+            color: var(--bg-primary);
+        }
+
+        /* ─── FACILITIES ─── */
+        .facility-heading {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 0.8rem;
+        }
+        .facility-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 1rem 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: all var(--transition-fast);
+        }
+        .facility-item:hover {
+            border-color: var(--gold-dark);
+            color: var(--text-primary);
+            background: var(--bg-card-hover);
+        }
+        .facility-item i {
+            color: var(--gold);
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        /* ─── NEWSLETTER ─── */
+        .newsletter {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+            border-top: 1px solid var(--border-dark);
+            border-bottom: 1px solid var(--border-dark);
+        }
+        .newsletter h2 {
+            margin-bottom: 0.5rem;
+        }
+        .newsletter p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            margin-bottom: 1.5rem;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 0.6rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .newsletter-form input {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-full);
+            padding: 0.85rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        .newsletter-form input:focus {
+            border-color: var(--gold-dark);
+            box-shadow: 0 0 0 3px var(--gold-glow);
+        }
+        .newsletter-form button {
+            padding: 0.85rem 2rem;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--bg-primary);
+            border-radius: var(--radius-full);
+            font-family: var(--font-accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: all var(--transition-base);
+            white-space: nowrap;
+        }
+        .newsletter-form button:hover {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ─── POPUP ─── */
+        .popup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            backdrop-filter: blur(8px);
+        }
+        .popup-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+        .popup-content img {
+            border-radius: var(--radius-lg);
+            display: block;
+            max-height: 85vh;
+            width: auto;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-lg);
+        }
+        .close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 40px;
+            height: 40px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-fast);
+            box-shadow: var(--shadow-sm);
+        }
+        .close:hover {
+            background: var(--gold);
+            color: var(--bg-primary);
+            border-color: var(--gold);
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            background: var(--bg-secondary);
+            padding: 4rem 0 0;
+            border-top: 1px solid var(--border-dark);
+        }
+        .footer .row {
+            grid-template-columns: 2fr 1fr 1.5fr 1fr;
+            align-items: start;
+            gap: 2.5rem;
+            padding-bottom: 3rem;
+        }
+        .footer h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-gold);
+            margin-bottom: 1.2rem;
+        }
+        .footer p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 0.7rem;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: all var(--transition-fast);
+        }
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--bg-primary);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        .footer-links li {
+            margin-bottom: 0.7rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .footer-links li i {
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            width: 16px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .footer-links a {
+            color: var(--text-secondary);
+            transition: color var(--transition-fast);
+        }
+        .footer-links a:hover {
+            color: var(--text-gold);
+        }
+        .footer-bottom {
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-dark);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ─── ANIMATIONS ─── */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 1200px) {
+            .usp-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .instagram-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .footer .row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-desktop {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .book-1 {
+                display: none;
+            }
+            .booking-widget-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+            .booking-field-btn {
+                grid-column: span 2;
+                justify-content: center;
+            }
+            .row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .experience-image {
+                order: -1;
+            }
+            .experience-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 3.5rem 0;
+            }
+            .usp-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .booking-widget-section {
+                margin-top: -2.5rem;
+            }
+            .booking-widget-bar {
+                grid-template-columns: 1fr;
+                padding: 1.2rem;
+            }
+            .booking-field-btn {
+                grid-column: span 1;
+            }
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer .row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .slider-nav {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            .slider-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .hero-content h1 {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
+            }
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .newsletter-form button {
+                width: 100%;
+            }
+            .facility-grid {
+                grid-template-columns: 1fr;
+            }
+            .experience-image img {
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .header-container {
+                padding: 0 1rem;
+            }
+            .instagram-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.3rem;
+            }
+            .room-card-buttons {
+                flex-direction: column;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Meta Pixel -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1759171664997265');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1759171664997265&ev=PageView&noscript=1" /></noscript>
+
+    <!-- Header -->
+    <!-- partials/header.html -->
+<header class="header" id="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="filter: brightness(1.1);">
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/rooms/index.html">Rooms & Suites</a></li>
+                <li><a href="pages/gallery/index.html">Gallery</a></li>
+                <li><a href="pages/local-explorer/index.html">Local Explorer</a></li>
+                <li><a href="pages/about/index.html">About Us</a></li>
+                <li><a href="pages/blog/index.html">Blog</a></li>
+                <li><a href="pages/contact/index.html">Contact</a></li>
+                <li><a href="pages/terms-and-condition/index.html">Terms</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary book-1">Book Now</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/rooms/index.html">Rooms & Suites</a></li>
+            <li><a href="pages/gallery/index.html">Gallery</a></li>
+            <li><a href="pages/local-explorer/index.html">Local Explorer</a></li>
+            <li><a href="pages/about/index.html">About Us</a></li>
+            <li><a href="pages/blog/index.html">Blog</a></li>
+            <li><a href="pages/contact/index.html">Contact</a></li>
+            <li><a href="pages/terms-and-condition/index.html">Terms & Condition</a></li>
+            <li><a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active" style="background-image: url('https://theconsorts.com/images/hero/consort_banner.png');"></div>
+                <div class="slide" style="background-image: url('https://theconsorts.com/images/hero/consort_banner_1.png');"></div>
+                <div class="slide" style="background-image: url('https://theconsorts.com/images/hero/consort_banner_2.png');"></div>
+                <div class="slide" style="background-image: url('https://theconsorts.com/images/hero/consort_banner_3.png');"></div>
+            </div>
+
+            <div class="slider-nav">
+                <button class="prev" aria-label="Previous">&#10094;</button>
+                <button class="next" aria-label="Next">&#10095;</button>
+            </div>
+
+            <div class="hero-content animate-fade-in">
+                <h1>In the Heart of Hunza,<br>Designed for Comfort.</h1>
+                <p>Unique container accommodations with breathtaking views of Hunza Valley</p>
+                <div class="hero-buttons">
+                    <a href="pages/rooms/index.html" class="btn btn-primary btn-lg">Explore Rooms</a>
+                    <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-secondary btn-lg">Book Now</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Widget -->
+    <section class="booking-widget-section">
+        <div class="booking-widget-bar">
+            <div class="booking-field">
+                <label for="bw-checkin"><i class="fas fa-calendar-alt"></i> Check-in</label>
+                <input type="date" id="bw-checkin">
+            </div>
+            <div class="booking-field">
+                <label for="bw-checkout"><i class="fas fa-calendar-alt"></i> Check-out</label>
+                <input type="date" id="bw-checkout">
+            </div>
+            <div class="booking-field">
+                <label><i class="fas fa-user"></i> Adults</label>
+                <div class="guest-counter">
+                    <button type="button" class="counter-btn minus" data-target="bw-adults">&#8722;</button>
+                    <input type="number" id="bw-adults" value="2" min="1" max="10" readonly>
+                    <button type="button" class="counter-btn plus" data-target="bw-adults">&#43;</button>
+                </div>
+            </div>
+            <div class="booking-field">
+                <label><i class="fas fa-child"></i> Children</label>
+                <div class="guest-counter">
+                    <button type="button" class="counter-btn minus" data-target="bw-children">&#8722;</button>
+                    <input type="number" id="bw-children" value="0" min="0" max="10" readonly>
+                    <button type="button" class="counter-btn plus" data-target="bw-children">&#43;</button>
+                </div>
+            </div>
+            <div class="booking-field booking-field-btn">
+                <button type="button" id="bw-check-availability" class="btn btn-primary">Check Availability</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="section">
+        <div class="container">
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-mountain"></i></div>
+                    <h3>Panoramic Views</h3>
+                    <p>Floor-to-ceiling windows offering uninterrupted views of Attabad Lake and surrounding mountains</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable container accommodations powered by renewable energy with minimal environmental impact</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-concierge-bell"></i></div>
+                    <h3>Personalized Service</h3>
+                    <p>Attentive staff providing customized experiences and local insights for an unforgettable stay</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Local Cuisine</h3>
+                    <p>Authentic Hunza Valley dishes prepared with fresh, locally-sourced ingredients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Preview -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Accommodations</p>
+                <h2>Our Unique Container Rooms</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Experience comfort and luxury in our thoughtfully designed container accommodations</p>
+            </div>
+
+            <div id="room-carousel" class="owl-carousel owl-theme">
+                <!-- Deluxe Room -->
+                <div class="room-card">
+                    <div class="room-card-image">
+                        <img src="https://theconsorts.com/images/rooms/000-3.jpg" alt="Deluxe Room" loading="lazy">
+                        <div class="room-card-price"><span>From $120/night</span></div>
+                    </div>
+                    <div class="room-card-content">
+                        <h3>Deluxe Room</h3>
+                        <p>Our Deluxe Rooms offer a warm and comfortable retreat, thoughtfully designed for a relaxing stay in Hunza. Featuring cozy interiors and modern amenities, ideal for peaceful rest after a day of exploration.</p>
+                        <div class="room-card-features">
+                            <span><i class="fas fa-user-friends"></i> 2 Guests</span>
+                            <span><i class="fas fa-bed"></i> Queen Bed</span>
+                            <span><i class="fas fa-bath"></i> En-suite</span>
+                        </div>
+                        <div class="room-card-price"><p>Partial Lake View</p></div>
+                        <div class="room-card-buttons">
+                            <a href="pages/rooms/index.html" class="btn btn-secondary">View Details</a>
+                            <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contemporary Suite -->
+                <div class="room-card">
+                    <div class="room-card-image">
+                        <img src="https://theconsorts.com/images/rooms/000-28.jpg" alt="Contemporary Suite" loading="lazy">
+                        <div class="room-card-price"><span>From $150/night</span></div>
+                    </div>
+                    <div class="room-card-content">
+                        <h3>Contemporary With Balcony</h3>
+                        <p>Designed for guests who appreciate space and comfort in a modern setting. Featuring stylish interiors, a private balcony, and thoughtful amenities for a refreshing stay in Hunza.</p>
+                        <div class="room-card-features">
+                            <span><i class="fas fa-user-friends"></i> 2 Guests</span>
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-bath"></i> En-suite</span>
+                        </div>
+                        <div class="room-card-price"><span>Lake View</span></div>
+                        <div class="room-card-buttons">
+                            <a href="pages/rooms/index.html" class="btn btn-secondary">View Details</a>
+                            <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exclusive Suite -->
+                <div class="room-card">
+                    <div class="room-card-image">
+                        <img src="https://theconsorts.com/images/rooms/000-32.jpg" alt="Exclusive Suite" loading="lazy">
+                        <div class="room-card-price"><span>From $200/night</span></div>
+                    </div>
+                    <div class="room-card-content">
+                        <h3>Exclusive With Infinity View & Balcony</h3>
+                        <p>Spacious and refined stay designed for guests seeking extra comfort and privacy. Featuring elegant interiors, private balcony, and uninterrupted infinity views of Hunza.</p>
+                        <div class="room-card-features">
+                            <span><i class="fas fa-user-friends"></i> 2-4 Guests</span>
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-bath"></i> Luxury Bath</span>
+                        </div>
+                        <div class="room-card-price"><span>Infinity Lake View</span></div>
+                        <div class="room-card-buttons">
+                            <a href="pages/rooms/index.html" class="btn btn-secondary">View Details</a>
+                            <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" target="_blank" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="pages/rooms/index.html" class="btn btn-secondary btn-lg">View All Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="experience-content">
+                        <p class="subtitle">Unique Experience</p>
+                        <h2>Where Comfort Meets the Spirit of Hunza</h2>
+                        <p>The Consorts Hotels & Resorts offers a thoughtfully crafted stay where modern comfort blends seamlessly with the natural charm of Hunza Valley. Surrounded by mountains, open skies, and a peaceful landscape, our resort is designed for guests seeking calm, warmth, and a genuine connection with nature.</p>
+                        <p>Our innovative container-style accommodations reflect an eco-conscious approach, carefully positioned to respect the environment while offering inviting, cozy interiors. Each room features large windows that bring natural light and scenic mountain views indoors.</p>
+                        <p>Beyond restful stays, we invite guests to experience Hunza at a slower, more meaningful pace. Wander through nearby villages, explore scenic trails, or simply unwind on your private balcony.</p>
+                        <div class="experience-features">
+                            <div class="experience-feature"><i class="fas fa-hiking"></i> <span>Guided Nature Walks & Hikes</span></div>
+                            <div class="experience-feature"><i class="fas fa-hiking"></i> <span>Cultural & Village Experiences</span></div>
+                            <div class="experience-feature"><i class="fas fa-camera"></i> <span>Photography Tours</span></div>
+                            <div class="experience-feature"><i class="fas fa-spa"></i> <span>Wellness & Relaxation Activities</span></div>
+                        </div>
+                        <a href="pages/local-explorer/index.html" class="btn btn-primary mt-3">Explore Activities</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="experience-image">
+                        <img src="https://theconsorts.com/images/rooms/lake_experience.png" alt="Attabad Lake Experience" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Explorer -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Discover Hunza Valley</p>
+                <h2>Local Explorer</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">The perfect base for exploring the natural wonders and cultural treasures of Hunza Valley</p>
+            </div>
+
+            <div id="explorer-carousel" class="owl-carousel owl-theme">
+                <div class="explorer-card">
+                    <div class="explorer-card-image">
+                        <img src="https://theconsorts.com/images/local-explorer/passu_cones.jpg" alt="Passu Cones" loading="lazy">
+                    </div>
+                    <div class="explorer-card-content">
+                        <h3>Offered Activities</h3>
+                        <p>Find the best restaurants, cafés, shops, and hidden gems in Hunza Valley.</p>
+                        <a href="pages/local-explorer/index.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <div class="explorer-card-image">
+                        <img src="https://theconsorts.com/images/local-explorer/baltit-fort.jpg" alt="Baltit Fort" loading="lazy">
+                    </div>
+                    <div class="explorer-card-content">
+                        <h3>Near By Attractions</h3>
+                        <p>Follow our expertly crafted day plans designed for different types of travelers.</p>
+                        <a href="pages/local-explorer/index.html" class="btn btn-secondary">View Itineraries</a>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <div class="explorer-card-image">
+                        <img src="https://theconsorts.com/images/local-explorer/attabad-lake.jpg" alt="Attabad Lake" loading="lazy">
+                    </div>
+                    <div class="explorer-card-content">
+                        <h3>Area Attractions</h3>
+                        <p>Discover breathtaking natural wonders and historic sites within easy reach of our hotel.</p>
+                        <a href="pages/local-explorer/index.html" class="btn btn-secondary">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Guest Experiences</p>
+                <h2>What Our Guests Say</h2>
+            </div>
+
+            <div id="testimonial-carousel" class="owl-carousel owl-theme">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Our stay at the Consorts Hotel was truly relaxing. From enjoying the beautiful views of Attabad lake while having breakfast to spending the nights in its cozy rooms and lavish interior — it was a memorable stay. The staff were very polite and helpful."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image"><img src="https://placehold.co/100x100/c9a962/0a0a0f?text=TDC" alt="Guest"></div>
+                        <div>
+                            <div class="testimonial-author-name">The Doodle Club TDC.</div>
+                            <div class="testimonial-author-title">London, UK</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Classic combination of luxury and nature. In the heart of the majestic Hunza Valley, it offers a blissful experience of nature. Surrounded by mountains and lush greenery, the consorts perfectly balances comfort with a connection to nature."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image"><img src="https://placehold.co/100x100/c9a962/0a0a0f?text=FK" alt="Guest"></div>
+                        <div>
+                            <div class="testimonial-author-name">Fayzan Keshwani.</div>
+                            <div class="testimonial-author-title">Dubai, UAE</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I stayed here for 2 days, loved the stay. Their food taste is excellent and especially the staff they were so humble and polite. Most recommended hotel in Hunza."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image"><img src="https://placehold.co/100x100/c9a962/0a0a0f?text=AK" alt="Guest"></div>
+                        <div>
+                            <div class="testimonial-author-name">Alysha Khan</div>
+                            <div class="testimonial-author-title"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Book Direct -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Exclusive Benefits</p>
+                <h2>Why Book Direct</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Enjoy special perks and privileges when you book directly through our website</p>
+            </div>
+
+            <div id="owl-demo-2" class="owl-carousel owl-theme">
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-percentage"></i></div>
+                    <h3>Best Rate Guarantee</h3>
+                    <p>We promise the lowest rates when you book directly. If you find a lower rate elsewhere, we'll match it and give you an additional 10% discount.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-glass-cheers"></i></div>
+                    <h3>Complimentary Welcome Drink</h3>
+                    <p>Start your stay with a refreshing welcome drink featuring local Hunza ingredients when you book directly with us.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Flexible Check-in/out</h3>
+                    <p>Enjoy more flexibility with early check-in and late check-out options (subject to availability) for direct bookings.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Free Premium Wi-Fi</h3>
+                    <p>Get access to our high-speed premium Wi-Fi service throughout your stay when you book directly.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-concierge-bell"></i></div>
+                    <h3>Personalized Service</h3>
+                    <p>Direct bookers receive priority attention from our concierge team for special requests and customized experiences.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-percentage"></i></div>
+                    <h3>Best Rate Guarantee</h3>
+                    <p>We promise the lowest rates when you book directly. If you find a lower rate elsewhere, we'll match it and give you an additional 10% discount.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-glass-cheers"></i></div>
+                    <h3>Complimentary Welcome Drink</h3>
+                    <p>Start your stay with a refreshing welcome drink featuring local Hunza ingredients when you book directly with us.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Flexible Check-in/out</h3>
+                    <p>Enjoy more flexibility with early check-in and late check-out options (subject to availability) for direct bookings.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Free Premium Wi-Fi</h3>
+                    <p>Get access to our high-speed premium Wi-Fi service throughout your stay when you book directly.</p>
+                </article>
+                <article class="thumbnail item">
+                    <div class="feature-icon"><i class="fas fa-concierge-bell"></i></div>
+                    <h3>Personalized Service</h3>
+                    <p>Direct bookers receive priority attention from our concierge team for special requests and customized experiences.</p>
+                </article>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://bookings.theconsorts.com/?hotel_id=14292&adult=2" class="btn btn-primary btn-lg">Book Direct Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather -->
+    <section>
+        <div class="container">
+            <div class="w-100">
+                <a class="weatherwidget-io" href="https://forecast7.com/en/36d4174d55/hunza/" data-label_1="HUNZA" data-label_2="WEATHER" data-font="Play" data-theme="dark">HUNZA WEATHER</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="subtitle">Social Media</p>
+                <h2>Follow Our Journey</h2>
+                <p class="mb-4" style="color:var(--text-secondary);">Share your experiences with us on Instagram using #TheConsortsHotels</p>
+            </div>
+            <div class="instagram-grid">
+                <div class="instagram-item mb-2"><img src="https://theconsorts.com/images/gallery/instagram_1.jpg" alt="Instagram 1" loading="lazy"><div class="instagram-overlay"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+                <div class="instagram-item mb-2"><img src="https://theconsorts.com/images/gallery/instagram_2.jpg" alt="Instagram 2" loading="lazy"><div class="instagram-overlay"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+                <div class="instagram-item mb-2"><img src="https://theconsorts.com/images/gallery/instagram_3.jpg" alt="Instagram 3" loading="lazy"><div class="instagram-overlay"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+                <div class="instagram-item mb-2"><img src="https://theconsorts.com/images/gallery/instagram_4.jpg" alt="Instagram 4" loading="lazy"><div class="instagram-overlay"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+                <div class="instagram-item mb-2"><img src="https://theconsorts.com/images/gallery/instagram_5.jpg" alt="Instagram 5" loading="lazy"><div class="instagram-overlay"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+                <div class="instagram-item mb-2"><img src="https://theconsorts.com/images/gallery/instagram_6.jpg" alt="Instagram 6" loading="lazy"><div class="instagram-overlay"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://www.instagram.com/" class="btn btn-secondary" target="_blank" rel="noopener">Follow Us on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Facilities -->
+    <section class="section additional-facilities bg-light">
+        <div class="container">
+            <h2 class="facility-heading">Additional Facilities</h2>
+            <div class="facility-grid">
+                <div class="facility-item"><i class="fas fa-wheelchair"></i> Wheel Chair Ramp</div>
+                <div class="facility-item"><i class="fas fa-parking"></i> Personal & Secure Vehicle Parking</div>
+                <div class="facility-item"><i class="fas fa-fire-extinguisher"></i> Fire Extinguishers</div>
+                <div class="facility-item"><i class="fas fa-video"></i> 24/7 Security Cameras</div>
+                <div class="facility-item"><i class="fas fa-user-shield"></i> 24/7 Security Guards</div>
+                <div class="facility-item"><i class="fas fa-magnet"></i> Metal Detectors</div>
+                <div class="facility-item"><i class="fas fa-calendar-day"></i> Open 365 Days</div>
+                <div class="facility-item"><i class="fas fa-fire"></i> Bonfire Facility</div>
+                <div class="facility-item"><i class="fas fa-broom"></i> 24/7 Housekeeping Service</div>
+                <div class="facility-item"><i class="fas fa-car"></i> Rent A Car Facility (Advance Booking)</div>
+                <div class="facility-item"><i class="fas fa-plane-departure"></i> Airport Transfer Facility (Advance Booking)</div>
+                <div class="facility-item"><i class="fas fa-road"></i> Easy Accessibility (At Main KKH)</div>
+                <div class="facility-item"><i class="fas fa-fence"></i> Fenced & Secured Vicinity</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with special offers, local events, and travel tips for Hunza Valley.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="mt-2" style="font-size:0.85rem; color:var(--text-muted);">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="https://theconsorts.com/images/logo/theconsort_logo_white.png" alt="The Consorts Hotels Logo" style="height:55px; margin-bottom:1.2rem;">
+                    <p>Experience eco-luxury at Attabad Lake with our unique container accommodations offering breathtaking views of Hunza Valley.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/theconsortshotel" target="_new" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/theconsortshotel" target="_new" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@the.consorts.hotel" target="_new" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@TheConsortsHotelsResorts" target="_new" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/rooms/index.html">Rooms & Suites</a></li>
+                        <li><a href="pages/gallery/index.html">Gallery</a></li>
+                        <li><a href="pages/local-explorer/index.html">Local Explorer</a></li>
+                        <li><a href="pages/about/index.html">About Us</a></li>
+                        <li><a href="pages/contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Karakoram Highway, Attabad Lake, Hunza, Gilgit-Baltistan, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> Official: +92 336 6676787</li>
+                        <li><i class="fas fa-phone"></i> Front Desk: +92 355 5262622</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@theconsorts.com">info@theconsorts.com</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:reservations@theconsorts.com">reservations@theconsorts.com</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://theconsorts.com/pages/terms-and-condition/index.html">Terms & Conditions</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Consorts Hotels & Resorts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3X7J449DL">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-H3X7J449DL');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223007346">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-18223007346');
+    </script>
+    <script>
+        ! function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = 'https://weatherwidget.io/js/widget.min.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'weatherwidget-io-js');
+    </script>
+
+    <script>
+        // Hero slider
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.slider-nav .prev');
+        const nextBtn = document.querySelector('.slider-nav .next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function goToSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            slides[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            goToSlide((currentSlide + 1) % slides.length);
+        }
+
+        function prevSlide() {
+            goToSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetSlider() {
+            clearInterval(slideInterval);
+            startSlider();
+        }
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => { nextSlide();
+                resetSlider(); });
+            prevBtn.addEventListener('click', () => { prevSlide();
+                resetSlider(); });
+        }
+        if (slides.length > 1) startSlider();
+
+        // Guest counter buttons
+        document.querySelectorAll('.counter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                const isPlus = this.classList.contains('plus');
+                let val = parseInt(input.value) || 0;
+                const min = parseInt(input.min) || 0;
+                const max = parseInt(input.max) || 99;
+                if (isPlus && val < max) val++;
+                if (!isPlus && val > min) val--;
+                input.value = val;
+            });
+        });
+
+        // Check availability
+        document.getElementById('bw-check-availability')?.addEventListener('click', function() {
+            const checkin = document.getElementById('bw-checkin').value;
+            const checkout = document.getElementById('bw-checkout').value;
+            const adults = document.getElementById('bw-adults').value;
+            const children = document.getElementById('bw-children').value;
+            const url = `https://bookings.theconsorts.com/?hotel_id=14292&adult=${adults}${children ? '&child=' + children : ''}${checkin ? '&checkin=' + checkin : ''}${checkout ? '&checkout=' + checkout : ''}`;
+            window.open(url, '_blank');
+        });
+
+        // Owl Carousels
+        jQuery(document).ready(function($) {
+            // Room carousel
+            $("#room-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                responsive: { 0: { items: 1 }, 600: { items: 1 }, 992: { items: 2 }, 1200: { items: 3 } }
+            });
+
+            // Explorer carousel
+            $("#explorer-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                responsive: { 0: { items: 1 }, 600: { items: 1 }, 900: { items: 2 }, 1200: { items: 3 } }
+            });
+
+            // Testimonial carousel
+            $("#testimonial-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                autoplay: true,
+                autoplayTimeout: 4500,
+                autoplayHoverPause: true,
+                dots: false,
+                nav: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                responsive: { 0: { items: 1 }, 600: { items: 1 }, 900: { items: 2 }, 1200: { items: 3 } }
+            });
+
+            // Why book direct carousel
+            var owl = $("#owl-demo-2");
+            owl.owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 2500,
+                autoplayHoverPause: true,
+                items: 3,
+                loop: true,
+                margin: 20,
+                nav: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                dots: false,
+                smartSpeed: 400,
+                responsive: { 0: { items: 1, nav: false }, 480: { items: 2, nav: false }, 768: { items: 3, nav: false }, 992: { items: 4, nav: false } }
+            });
+            $(".next").click(function() { owl.trigger("owl.next"); });
+            $(".prev").click(function() { owl.trigger("owl.prev"); });
+        });
+
+        // Popup modal functions
+        function openModal() {
+            const popup = document.getElementById('popup');
+            if (popup) popup.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const popup = document.getElementById('popup');
+            if (popup) popup.style.display = 'none';
+        }
+    </script>
+    <script>
+(function() {
+    function initHeader() {
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+        }
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+        if (hamburger && navMobile && overlayBackdrop) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMobile.classList.toggle('open');
+                overlayBackdrop.classList.toggle('visible');
+                document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+            });
+            overlayBackdrop.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                overlayBackdrop.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+            document.querySelectorAll('.nav-mobile a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMobile.classList.remove('open');
+                    overlayBackdrop.classList.remove('visible');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+        let currentPath = window.location.pathname;
+        if (currentPath === '' || currentPath === '/') currentPath = '/index.html';
+        document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(link => {
+            let linkPath;
+            try { linkPath = new URL(link.getAttribute('href'), window.location.href).pathname; } catch (e) { return; }
+            if (linkPath === currentPath) link.classList.add('active');
+        });
+    }
+    initHeader();
+})();
+</script>
+</body>
+</html>
